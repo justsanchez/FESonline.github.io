@@ -1,0 +1,298 @@
+/*Stylesheet for the Meet Our Team Tab*/
+/*Credit for background animation: @designtorch2020 codepen*/
+/*Credit for glass-morphism card: @designtorch2020 codepen*/
+
+
+/*choose a good font for website*/
+
+
+
+.container h4{
+        /*border: solid red;*/
+
+    margin: 10px 0 0 30px ;
+      /*margin: 0 auto; !* Horizontal centering *!*/
+
+    width: min(100%,1200px);
+
+    font-size: 350%;
+
+
+}
+
+.card-container{
+    /*border: solid red;*/
+
+    /*shrinks border*/
+
+    /*border: solid red;*/
+    width: min(100%,1200px);
+    /*padding: 20px;*/
+    /*min-height: 50vh;*/
+    /*background-color: #0E315C;*/
+
+
+    display: flex;
+    /*grid-gap: 100px;*/
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  margin: 0 auto; /* Horizontal centering */
+
+
+    /*a good setting is 50px*/
+    gap: 50px; !important;
+}
+
+
+.card{
+
+    /*edit the gap between the pictures*/
+    margin: 32px; !important;
+
+    /*you can add a small border here using padding*/
+    /*padding: 5px;*/
+
+    width: 300px;
+    /*background-color: rgb(0,0,0,0.5);*/
+    /*box-shadow: 0 5px 20px rgba(0,0,0,0.05);*/
+
+    /*this controls the color of the card*/
+    background: radial-gradient(
+      140% 140% at 0% 0%,
+
+      rgba(255, 255, 255, 0.2) 1%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    /*these two make it have a glass look appearance*/
+    /*border-top: 1px solid #eeeded70;*/
+    border-left: 1px solid #eeeded70;
+    border-radius: 35px;
+    box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(30px);
+  display: inline-block;
+
+      /*cursor: pointer;*/
+transition-property: transform; /* Apply the transition to the transform property */
+    transition-duration: 0.3s; /* Adjust the duration as needed */
+    transition-timing-function: ease-in-out; /* Use the ease-in-out timing function */
+}
+
+
+.card img{
+    /*make the img smaller to fit card*/
+    /*margin: 10px 0 0 0;*/
+    border-radius: 30px; /* Adjust the value to control the level of smoothness */
+
+    max-width: 100%;
+    max-height: 100%;
+    /*width: auto;*/
+    /*height: auto;*/
+
+    /*temporary, just find a specific format size and stick with it */
+    /*this is what makes the img stretched alittle*/
+    width: 400px; /* Set the width to 300 pixels */
+    height: 350px; /* Set the height to 200 pixels */
+}
+
+.card-info{
+    padding:0;
+    margin: 0;
+    text-align: center;
+      display: flex;
+    flex-direction: column;
+      margin-bottom: 10px; /* Adjust this value to control the spacing between items */
+
+
+}
+
+.card-info h6{
+    margin: 3px 0 0 0;
+    /*margin-bottom: 3px;*/
+    font-size: 16px;
+    font-weight: 700;
+    /*Raleway*/
+    font-family: sans-serif;
+    /*can take off*/
+    text-transform: capitalize;
+}
+
+.card-info span{
+
+    margin-bottom: 5px;
+    color: #4169E1;
+    font-size: 13px;
+    font-weight: 400;
+    /*Poppins*/
+    font-family: sans-serif;
+
+}
+
+/*.about-text {*/
+/*    padding: 25px;*/
+
+/*}*/
+
+.card-info p {
+  display: inline;
+  position: relative;
+  color: white; /* Change the initial text color as needed */
+  text-decoration: none;
+  border-bottom: 2px solid blue; /* can add a transparent to make it invisible */
+  transition: border-color 0.3s; /* Add a smooth transition for the border color */
+  margin: 1000px 0; /* Add margin to create space above and below the text */
+
+}
+
+.card-info p:hover {
+  border-color: #afd8e9; /* Change the border color to green on hover */
+}
+
+
+/*just to make the cards hover only in the team page*/
+.card:hover {
+    transform: translate(0, -0.3%);
+
+}
+
+
+/*.about-text {*/
+/*    !*padding: 1px;*!*/
+/*    border: solid red;*/
+
+/*  display: inline;*/
+/*  position: relative;*/
+/*  color: white;*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*.about-text::after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  bottom: 16px; !* Adjust this value to control the distance of the underline *!*/
+/*  width: 100%;*/
+/*  height: 2px; !* Adjust this value to control the underline thickness *!*/
+/*  background: blue;*/
+/*  transition: background 0.3s; !* Add a smooth transition for the background color *!*/
+/*}*/
+
+/*.about-text:hover::after {*/
+/*  background: white;*/
+/*}*/
+
+
+
+/*
+possible grid template
+(for e-board)
+https://www.youtube.com/watch?v=78aWIBhVqoU
+(more grid templates)
+https://www.youtube.com/watch?v=rnhoY5Cdmy0
+*/
+
+
+/*Future problems:
+- figure out how to have them in the exact same size */
+
+/*Animated background*/
+
+/*.structure::before{*/
+/*  content: "";*/
+/*  width: 50%;*/
+/*  height: 50%;*/
+/*  border-radius: 100%;*/
+/*  box-shadow: 0 -150px 400px #000044;*/
+/*  position: fixed;*/
+/*  bottom: -50%;*/
+/*  left: 25%;*/
+/*  z-index: -1;*/
+/*}*/
+
+/*.structure::after{*/
+/*  content: "";*/
+/*  width: 50%;*/
+/*  height: 50%;*/
+/*  border-radius: 100%;*/
+/*  box-shadow: 0 150px 300px #000044;*/
+/*  position: fixed;*/
+/*  top: -50%;*/
+/*  left: 25%;*/
+/*  z-index: -1;*/
+/*  animation: animate_1 10s infinite;*/
+/*}*/
+
+/*.container::before{*/
+/*  content: "";*/
+/*  width: 50%;*/
+/*  height: 100%;*/
+/*  border-radius: 100%;*/
+/*  box-shadow: 0 0 500px 450px #000000;*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: -50%;*/
+/*  z-index: -1;*/
+/*  animation: animate_2 10s infinite;*/
+/*}*/
+
+/*.container::after{*/
+/*  content: "";*/
+/*  width: 50%;*/
+/*  height: 100%;*/
+/*  border-radius: 100%;*/
+/*  box-shadow: 0 0 500px 450px #000000;*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  right: -50%;*/
+/*  z-index: -1;*/
+/*  animation: animate_3 10s infinite;*/
+/*}*/
+
+/*!* Let's Create Animation *!*/
+/*@keyframes animate_1{*/
+/*  25%{*/
+/*    box-shadow: 0 150px 300px #000044;*/
+/*  }*/
+/*  50%{*/
+/*    box-shadow: 0 150px 300px #000000;*/
+/*  }*/
+/*  75%{*/
+/*    box-shadow: 0 150px 300px #000000;*/
+/*  }*/
+/*  100%{*/
+/*    box-shadow: 0 150px 300px #000044;*/
+/*  }*/
+/*}*/
+
+/*@keyframes animate_2{*/
+/*  25%{*/
+/*    box-shadow: 0 0 500px 450px #000000;*/
+/*  }*/
+/*  50%{*/
+/*    box-shadow: 0 0 500px 450px #000000;*/
+/*  }*/
+/*  75%{*/
+/*    box-shadow: 0 0 500px 450px #000044;*/
+/*  }*/
+/*  100%{*/
+/*    box-shadow: 0 0 500px 450px #000000;*/
+/*  }*/
+/*}*/
+
+/*@keyframes animate_3{*/
+/*  25%{*/
+/*    box-shadow: 0 0 500px 450px #000000;*/
+/*  }*/
+/*  50%{*/
+/*    box-shadow: 0 0 500px 450px #000044;*/
+/*  }*/
+/*  75%{*/
+/*    box-shadow: 0 0 500px 450px #000000;*/
+/*  }*/
+/*  100%{*/
+/*    box-shadow: 0 0 500px 450px #000000;*/
+/*  }*/
+/*}*/
+
+/*end of Animated background settings*/

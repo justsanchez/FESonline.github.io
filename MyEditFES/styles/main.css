@@ -1,0 +1,821 @@
+/*Main CSS*/
+/*Contains Notes for future development*/
+/*Credit For Hamburger Menu: Kevin Powell*/
+/*Credits For Social Media Icons: @vpdemo codepen*/
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+html{
+    /*font color*/
+    color: white;
+    /*width to cover the whole page*/
+    width: 100%;
+    /*height: 100vh;*/
+}
+
+
+/*css variable*/
+:root {
+  /*
+  - the first three makes the color black
+  - the last digit is what makes it transparent
+  */
+    --background: rgb(0, 0, 0, 0.8);
+    --color: white;
+}
+
+
+/*Notes
+:root is a pseudo-class selector that targets
+the highest-level parent element in the HTML document,
+which is usually the <html> element.
+
+--background is a custom property (variable) that you're
+defining here. It's a user-defined name for a value that
+you can use throughout your CSS code.
+
+purpose: In this case, the background color is set to black
+
+*/
+
+/* Apply border-box sizing to all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+/* Notes
+The box-sizing property controls how the dimensions of an element are calculated
+The "*" selector targets all elements on the web page.
+*::before targets pseudo-elements that are inserted before the content of an element.
+*::after targets pseudo-elements that are inserted after the content of an element.
+
+Purpose:
+The purpose of applying box-sizing: border-box; to all elements, including pseudo-elements,
+is to create a more predictable and consistent layout. It helps to avoid unexpected spacing
+and sizing issues that might occur due to the default content-box behavior.
+
+*/
+
+body {
+	margin: 0;
+        background-image: linear-gradient(
+            to bottom,
+            #121212,
+            #000044
+
+    );
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 400;
+}
+
+
+
+
+/* navigation styles start here */
+
+header {
+
+    /*using the variable here*/
+    background: var(--background);
+    text-align: center;
+
+    /*keeps nav in the same place the whole time */
+    /*to keep it where it is use relative*/
+    position: fixed;
+
+    /*so make sure it is on top of everything*/
+    z-index: 999;
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    /*position: absolute;*/
+    /*top: -9999px ;*/
+    /*left: -9999px ;*/
+}
+
+/*the hamburger icon*/
+.nav-toggle-label {
+    /*border: solid red;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* has to match with nav li */
+    margin-left: 1em;
+    font-weight: bold;
+
+    height: 100%;
+    /*centering the icon in the height*/
+    display: flex;
+    align-items: center;
+}
+
+/*making and customizing the icon*/
+
+/*can have a animation on the icon for more professional look*/
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    /*mutable*/
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    /*NEEDED, it defaults to none*/
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+/* Hover styles */
+.nav-toggle-label:hover span,
+.nav-toggle-label:hover span::before,
+.nav-toggle-label:hover span::after {
+    background: slategrey; /* Change to your desired hover color */
+    transform: scale(1.1); /* Add a slight scale effect on hover */
+}
+
+.nav-toggle-label:hover span::before {
+    bottom: 8px;
+}
+
+.nav-toggle-label:hover span::after {
+    top: 8px;
+}
+/*end of hover styles*/
+
+
+
+/*end of making and customizing the icon*/
+
+/*actual contents of the nav*/
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    /*can make it transparent*/
+    background: var(--background);
+    width: 100%;
+
+    /*to not display the nav*/
+    /*display: none;*/
+
+    /*alternative approach to not display the nav*/
+    transform: scale(1, 0);
+
+    /*will transform from the top to bottom*/
+    transform-origin: top;
+
+    /*to stop the glitch after the page is loaded turn to zero*/
+    transition: transform 400ms ease-in-out;
+}
+
+/*Notes
+transform: This is the CSS property that allows
+you to apply transformations to an element.
+
+scale(): This is a function within the transform
+property that is used to scale an element.
+
+1 means no scaling along the X-axis, so the element
+retains its original width.
+
+0 means the element is completely collapsed along
+the Y-axis, effectively making it INVISIBLE in terms of height.
+*/
+
+
+
+nav ul {
+    /*removing margin and padding*/
+    margin: 0;
+    padding: 0;
+    /*removing the bullets*/
+    list-style: none;
+}
+
+nav li {
+    /*not needed too much, can mess around with*/
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    /*removing the hyperlink look*/
+    text-decoration: none;
+    /*changeable*/
+    font-size: 1.2rem;
+
+    /*text-transform: uppercase;*/
+
+    /*applies to the links*/
+    opacity: 0;
+    /*can modify the milliseconds*/
+    transition: opacity 150ms ease-in-out;
+}
+
+
+
+nav a:hover {
+    /*can have another color*/
+    color: #4169E1;
+}
+
+
+.nav-toggle:checked ~ nav {
+    /*will make it reappear*/
+    transform: scale(1,1);
+
+    /*used only when nav is not displayed*/
+    /*display: block;*/
+
+
+}
+
+/*Notes
+.nav-toggle is a class selector targeting an HTML element,
+an <input> element with a class of nav-toggle.
+
+:checked is a pseudo-class selector that matches the element
+when it's in a checked state. For checkboxes and radio buttons,
+this selector is used to target the element when it's selected or checked.
+
+The "~" symbol is a general sibling combinator.
+It selects all sibling elements that share the same parent and come
+after the specified element.
+*/
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    /*can modify the milliseconds*/
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+/*end of hamburger editing*/
+
+  /* FES Logo styles to keep it a reasonable size */
+.logo-tab img {
+    /*can modify the padding to make the nav bigger or smaller*/
+    padding: 9px;
+    max-width: 180px;
+    height: auto;
+}
+
+.imgSizing {
+    /*can modify the padding to make the nav bigger or smaller*/
+    /*padding: 9px;*/
+    width: 100%;
+    max-height: 100vh;
+    /*height: auto;*/
+}
+
+/*video adjustments*/
+
+.video-container {
+    /*optional if you dont want the video to start off beneath the nav*/
+    /*top: 53px;*/
+    position: initial;
+    width: 100%;
+    /*editing the size of the video*/
+    max-height: 80vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-97%, -50%);
+    text-align: center;
+    color: white;
+    /*font-size: 250%;*/
+    font-size: 4.5vw;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*Refreshing Page Settings*/
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    flex-direction: column;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*Content settings start here*/
+  .container {
+
+    margin: 59.3px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns as needed */
+    gap: 10px; /* Adjust the gap between grid items */
+}
+
+  .container > div {
+    /*background-color: red;*/
+    padding: 0;
+
+    /*makes all text in divs to align in the middle */
+    /*text-align: none;*/
+
+    /*border: 1px solid #ccc;*/
+      /*background-color: crimson;*/
+}
+
+  #call-to-action{
+    /*border: solid red;*/
+    /*margin: 0 17px;*/
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+    justify-content: center;
+    /*margin: 0 120px; !* Horizontal centering *!*/
+    align-items: center;
+  }
+
+  /*use better class names */
+#lure{
+    text-align: center;
+    padding: 0 40px;
+  margin: 0 auto; /* Horizontal centering */
+}
+  .text{
+/*background-color: #21359c;*/
+background-color: #4169E1;
+
+
+    display: grid;
+
+    grid-template-columns: 2fr;
+    justify-content: center;
+
+    padding: 27px 127px;
+  }
+
+    .text2{
+
+        margin: 0 100px 0 40px ;
+        /*border: solid red;*/
+
+  }
+
+  #call-to-action h3{
+    font-size: 17pt;
+
+      /*font-size: 3vw;*/
+  }
+
+
+
+
+/*Content settings end here*/
+
+
+    .pt-sans-narrow {
+        font-family: 'PT Sans Narrow', sans-serif;
+        text-align: center;
+    }
+
+    .companys{
+        /*padding: 100px 100px;*/
+
+    width: min(100%,100%);
+    /*padding: 20px;*/
+    /*min-height: 50vh;*/
+    /*background-color: #0E315C;*/
+
+    background-color: white;
+    display: flex;
+    /*grid-gap: 100px;*/
+
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    }
+
+    .companys img{
+
+        width: 20%;
+        /*aspect-ratio: 4/2;*/
+        padding: 10px 50px;
+    }
+.smooth-hover {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.smooth-hover:hover {
+    transform: scale(1.05);
+}
+
+
+/*structure is set so items wont overlap each other*/
+.structure{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns as needed */
+    /*no gap is needed*/
+}
+
+
+footer{
+    /*doesnt need to be black*/
+    background-color: black;
+    padding: 10px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/*media query for items to disappear*/
+@media screen and (max-width: 1180px) {
+
+#logos{
+    /*an alternative to using display: none*/
+    position: absolute;
+    top: -9999px ;
+    left: -9999px ;
+}
+
+.centered-text{
+    width: 100%;
+
+
+    transform: translate(-50%,-155%);
+
+}
+
+
+
+#call-to-action{
+    grid-template-columns: 1fr;
+}
+
+.text2{
+    margin: 0 40px 0 40px ;
+
+}
+    .companys img{
+
+        width: 27%;
+        /*aspect-ratio: 4/2;*/
+        padding: 10px 50px;
+    }
+
+}
+
+/*for company logos*/
+/*check if the phone format accepts it*/
+@media screen and (max-width: 630px) {
+
+        .companys img{
+
+        width: 35%;
+        /*aspect-ratio: 4/2;*/
+        padding: 10px 50px;
+    }
+
+}
+
+/*media queries should always go at the bottom*/
+
+@media screen and (min-width: 1180px) {
+
+  /*  media query settings for navigation starts here */
+
+/*making the hamburger icon disappear*/
+.nav-toggle-label {
+    display: none;
+}
+
+/*the whole skeleton of the navigation*/
+header {
+    display: grid;
+    /*making columns here*/
+    /*changed for logo, originally 600px*/
+    grid-template-columns: 1fr auto minmax(800px, 3fr) 1fr;
+}
+
+/*Notes
+
+minmax(999px, 9fr): The minmax() function specifies a range
+of acceptable sizes for the column. It takes
+two parameters: the minimum size and the maximum size. In this case:
+
+999px is the minimum size of the column. It ensures that the column
+will be at least 999 pixels wide.
+
+9fr is the maximum size of the column, expressed as a flexible
+fraction. It means that the column can expand up to three fractions
+of the available space.
+
+1fr: Similar to the first and last columns, this is another flexible
+unit that takes up one fraction of the available space. It's used for
+the fourth column.
+
+*/
+
+
+.logo-tab {
+    grid-column: 1 / 3;
+}
+
+
+  nav {
+    all: unset; /* this may cause issues with Edge, since it's unsupported */
+
+    /*position: relative;*/
+    /*text-align: left;*/
+    /*transition: none;*/
+    /*transform: scale(1,1);*/
+    /*background: none;*/
+    /*top: initial;*/
+    /*left: initial;*/
+    /* end Edge support stuff */
+
+    grid-column: 2 / 4;
+    display: flex;
+
+  /*modify to make it closer to the logo*/
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+/*centering the items*/
+nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+}
+
+nav a {
+    opacity: 1;
+    font-size: 1rem;
+
+    /*position: relative;*/
+  }
+
+
+
+/*  media query settings for navigation ends here */
+
+}
+
+/*start of logo settings*/
+
+
+#logos{
+    display: flex;
+/*  can modify it here to make it be in the start (flex-start) or in the end (felx-end)  */
+    justify-content: center;
+    align-items: center;
+}
+#logosFooter{
+    /*centering problem temporary fix*/
+    margin: 0 42px 0 0;
+
+    display: flex;
+/*  can modify it here to make it be in the start (flex-start) or in the end (felx-end)  */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*tedious problems*/
+#linkedinIcon, #linkedinIcon:hover {
+	/*color: var(--color);*/
+	text-decoration: none;
+	padding: 5px;
+}
+
+#instaIcon, #instaIcon:hover {
+	/*color: var(--color);*/
+	text-decoration: none;
+	padding: 5px;
+}
+
+#linkedinIconFooter, #linkedinIconFooter:hover {
+	/*color: var(--color);*/
+	text-decoration: none;
+	padding: 5px;
+}
+
+#instaIconFooter, #instaIconFooter:hover {
+	/*color: var(--color);*/
+	text-decoration: none;
+	padding: 5px;
+}
+
+#alvaroIconInsta, #alvaroIconInsta:hover {
+	/*color: var(--color);*/
+	text-decoration: none;
+	padding: 5px;
+}
+
+#alvaroIconLinkin, #alvaroIconLinkin:hover {
+	/*color: var(--color);*/
+	text-decoration: none;
+	padding: 5px;
+}
+
+
+
+/*end of tedious problems*/
+
+.socialbtnsbtnsbtns, .socialbtnsbtnsbtns ul, .socialbtnsbtnsbtns li {
+	margin: 0;
+	padding: 5px;
+}
+
+.centerICON{
+    transform: translate(-95%,0);
+
+	padding: 0;
+    left: 500px;
+}
+
+.socialbtnsbtnsbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+	color: #FFF;
+	text-shadow: 1px 1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			-1px -1px 0 #000;
+	-webkit-text-shadow: 1px 1px 0px #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			-1px -1px 0 #000;
+	-moz-text-shadow: 1px 1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			-1px -1px 0 #000;
+	-o-text-shadow: 1px 1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			-1px -1px 0 #000;
+	transition: all ease-out 0.5s;
+	-moz-transition: all ease-out 0.5s;
+	-webkit-transition: all ease-out 0.5s;
+	-o-transition: all ease-out 0.5s;
+}
+
+
+
+
+
+
+/*end of logo settings*/
+
+
+
+
+
+/* Overlay styles */
+
+/*try to go for the ease-est transition*/
+.modaloverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+
+
+
+}
+
+/* Popup styles */
+.modalstyles {
+                      transform: scale(1);
+  transition: transform 0.3s ease-in;
+    color: black;
+  position: relative;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80%;
+  /*modify where you want it*/
+  top: 100px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+}
+
+/* Close button styles */
+.closemodal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  /*color: #333;*/
+
+
+}
+
+/* Content inside the popup */
+.modalcontent {
+  padding: 20px;
+
+}
+
+/* Button styles */
+.button {
+  display: inline-block;
+  /*padding: 10px 20px;*/
+  /*background-color: #0074c2;*/
+  color: #fff;
+  text-decoration: none;
+  /*border-radius: 5px;*/
+  /*margin: 10px;*/
+/*  cursor: pointer;*/
+/*transition-property: transform; !* Apply the transition to the transform property *!*/
+/*    transition-duration: 0.3s; !* Adjust the duration as needed *!*/
+/*    transition-timing-function: ease-in-out; !* Use the ease-in-out timing function *!*/
+}
+
+
+
+
+/*delete this*/
+.centered-gif {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
