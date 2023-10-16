@@ -744,6 +744,10 @@ nav a {
 
 /*try to go for the ease-est transition*/
 .modaloverlay {
+    	/*margin: 0;*/
+
+    margin: 0;
+    padding: 0;
   display: none;
   position: fixed;
   top: 0;
@@ -759,17 +763,21 @@ nav a {
 
 /* Popup styles */
 .modalstyles {
-                      transform: scale(1);
-  transition: transform 0.3s ease-in;
-    color: black;
+  /*transform: scale(1);*/
+  /*transition: transform 0.3s ease-in;*/
+
+
+  color: white;
   position: relative;
+
   margin: 50px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   /*modify where you want it*/
-  top: 100px;
+  top: 30px;
+  /*This where you modify how large you want it*/
   max-width: 600px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -777,20 +785,46 @@ nav a {
 }
 
 /* Close button styles */
+/*Credit: Константин @Reiter43*/
 .closemodal {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
-  /*color: #333;*/
+	position: absolute;
+	top: 8px;
+	right: 12px;
+	width: 20px;
+	height: 20px;
+	opacity: 0.2;
+	cursor: pointer;
+    transition: opacity ease 0.5s;
 
 
 }
 
+.closemodal:hover {
+    opacity: 1;
+}
+
+.closemodal::before,
+.closemodal::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: #000;
+}
+
+.closemodal::before {
+	transform: rotate(45deg);
+}
+
+.closemodal::after {
+	transform: rotate(-45deg);
+}
+
+
 /* Content inside the popup */
-.modalcontent {
+.modalcontent{
   padding: 20px;
 
 }
