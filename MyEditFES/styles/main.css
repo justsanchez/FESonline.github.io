@@ -284,12 +284,27 @@ after the specified element.
     height: auto;
 }
 
+.logo-tab a img {
+    /*can modify the padding to make the nav bigger or smaller*/
+    padding: 9px;
+    max-width: 180px;
+    height: auto;
+}
+
 .imgSizing {
     /*can modify the padding to make the nav bigger or smaller*/
     /*padding: 9px;*/
     width: 100%;
     max-height: 100vh;
     /*height: auto;*/
+}
+
+.imgSizingNcinoPicture{
+        width: 100%;
+    max-width: 400px;
+
+    margin: 0 auto; /* Center the image horizontally */
+
 }
 
 /*video adjustments*/
@@ -377,7 +392,7 @@ video {
       /*background-color: crimson;*/
 }
 
-  #call-to-action{
+  .call-to-action{
     /*border: solid red;*/
     /*margin: 0 17px;*/
     display: grid;
@@ -414,7 +429,7 @@ background-color: #4169E1;
 
   }
 
-  #call-to-action h3{
+  .call-to-action h3{
     font-size: 17pt;
 
       /*font-size: 3vw;*/
@@ -431,21 +446,15 @@ background-color: #4169E1;
         text-align: center;
     }
 
-    /* YOU CAN EDIT HEREE */
     .companys{
         /*padding: 100px 100px;*/
-    
-
-
-        
-    /* DONT EDIT ANYTHING FURTHER */
 
     width: min(100%,100%);
     /*padding: 20px;*/
     /*min-height: 50vh;*/
     /*background-color: #0E315C;*/
 
-    background-color: white;
+    background-color: whitesmoke;
     display: flex;
     /*grid-gap: 100px;*/
 
@@ -470,6 +479,26 @@ background-color: #4169E1;
 .smooth-hover:hover {
     transform: scale(1.05);
 }
+
+/*FIXED*/
+.fixedlenovo{
+    margin: 20px 0 0 0;
+}
+
+.fixedMegaCoprp{
+    margin: 20px 0 0 0;
+}
+
+.whyFES{
+    /*border: solid red;*/
+    /*margin: 0 17px;*/
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    /*margin: 0 120px; !* Horizontal centering *!*/
+    align-items: center;
+  }
 
 
 /*structure is set so items wont overlap each other*/
@@ -501,6 +530,7 @@ footer{
     left: -9999px ;
 }
 
+
 .centered-text{
     width: 100%;
 
@@ -510,10 +540,6 @@ footer{
 }
 
 
-
-#call-to-action{
-    grid-template-columns: 1fr;
-}
 
 .text2{
     margin: 0 40px 0 40px ;
@@ -580,9 +606,9 @@ the fourth column.
 */
 
 
-.logo-tab {
-    grid-column: 1 / 3;
-}
+/*.logo-tab {*/
+/*    grid-column: 1 / 3;*/
+/*}*/
 
 
   nav {
