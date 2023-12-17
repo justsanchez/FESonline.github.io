@@ -523,7 +523,7 @@ footer{
 /*media query for items to disappear*/
 @media screen and (max-width: 1180px) {
 
-#logos{
+.logosNAV{
     /*an alternative to using display: none*/
     position: absolute;
     top: -9999px ;
@@ -657,7 +657,7 @@ nav a {
 /*start of logo settings*/
 
 
-#logos{
+.logos{
     display: flex;
 /*  can modify it here to make it be in the start (flex-start) or in the end (felx-end)  */
     justify-content: center;
@@ -675,13 +675,31 @@ nav a {
 
 
 /*tedious problems*/
-#linkedinIcon, #linkedinIcon:hover {
+.linkedinIcon, .linkedinIcon:hover {
 	/*color: var(--color);*/
 	text-decoration: none;
 	padding: 5px;
 }
 
-#instaIcon, #instaIcon:hover {
+.linkedinIconModal{
+    text-decoration: none;
+	padding: 5px;
+    /*border: solid red;*/
+    /*transform: translate(-560%,0);*/
+
+}
+
+
+
+.mailIconModal{
+	padding: 5px;
+    text-decoration: none;
+    font-size: 1.1em; /* You can adjust this value to make it smaller or larger */
+    margin: 40px 0 0 0;
+    /*border: solid red;*/
+}
+
+.instaIcon, .instaIcon:hover {
 	/*color: var(--color);*/
 	text-decoration: none;
 	padding: 5px;
@@ -828,11 +846,11 @@ nav a {
 	cursor: pointer;
     transition: opacity ease 0.5s;
 
-
 }
 
 .closemodal:hover {
     opacity: 1;
+
 }
 
 .closemodal::before,
@@ -876,7 +894,117 @@ nav a {
 /*    transition-timing-function: ease-in-out; !* Use the ease-in-out timing function *!*/
 }
 
+/* Styling for the 'checkbox' class unordered list */
+.checkbox {
+  margin: 0 auto;
+  display: block;
+  list-style: none;
+  width: 90%;
+}
 
+
+/* Styling for list items within 'checkbox' class */
+.checkbox li {
+    display: block;
+    font-size: 18px;
+    /*margin-bottom: 15px;*/
+
+    color: #fff;
+    background: none;
+    padding-top: 35px;
+    position: relative;
+    }
+
+/*making a transparent border class to
+ just style the border lines and not
+ the content*/
+.transparent-border {
+    /*can add padding to make a spacing in between the boxes*/
+    position: relative;
+}
+.transparent-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #f2f2f2; /* Border color */
+    border-top: 1px solid #f2f2f2; /* Border color */
+    opacity: 0.3;
+    z-index: -1; /* Send the pseudo-element to the background */
+}
+
+/* Styling for 'h3' elements within list items */
+.checkbox li h3 {
+  padding-left: 17px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 3px;
+  font-size: 17px;
+}
+
+/* Styling for 'i' elements within list items */
+.checkbox li i {
+  color: #fff;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 22px;
+  font-family: serif;
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+  line-height: 16px;
+  height: 11px;
+}
+
+/* Styling for 'article' elements within list items */
+.checkbox li article {
+  max-height: 0px;
+  overflow: hidden;
+  transition-duration: 0.7s;
+}
+
+.checkbox li article div {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 17px;
+}
+
+/* Styling for 'input' elements within list items */
+.checkbox li input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  border: none;
+  background: transparent;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Styling for unchecked state */
+.checkbox li i {
+  font-style: normal; /* prevents italic style if using <i> tag */
+  /* Additional styling as needed */
+}
+
+/* Styling for checked 'input[type=checkbox]' within list items */
+.checkbox li input[type=checkbox]:checked ~ article {
+  max-height: 400px;
+}
+
+.checkbox li input[type=checkbox]:checked ~ i {
+  transform: rotate(0deg); /* Rotates the plus symbol to form a minus */
+}
+
+.answerFont{
+    /*font-size: 16.4px;*/
+    font-weight: 100;
+}
 
 
 /*delete this*/

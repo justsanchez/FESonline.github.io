@@ -152,7 +152,7 @@ border-color: #afd8e9; /* Change the border color to green on hover */
 
 /*just to make the cards hover only in the team page*/
 .card:hover {
-transform: translate(0, -0.3%);
+transform: translate(0, -0.45%);
 
 }
 
@@ -178,30 +178,73 @@ width: 100%; /* Set the width to 300 pixels */
 height: 100%; /* Set the height to 200 pixels */
 }
 
+/*.bottom-media{*/
+/*    position: absolute;*/
+/*    bottom: 2px;*/
+/*    width: 100%; !* Optionally, to stretch it to the full width of the container *!*/
+/*    max-width: 405px;*/
+/*}*/
 
-
+.socialbtns{
+/*padding: 10px;*/
+}
 
 /*make it say, "click anywhere to exit" */
 .modalstyles {
 /*takes the borders away*/
 padding: 0;
-
 display: grid;
 grid-template-columns: 1fr 1fr;
-max-width: 750px;
+/*configure the size of the boxes here*/
+/*have to change this whenever the aspect ratio shrinks*/
+max-width: 890px;
+/*
+#2e3a8e (decent)
+#1c2464 (okay)
+#111637
+#0c0f24*/
+background: linear-gradient(to bottom, #001f3f, #0c0f24);
+
 
 
 }
+
 .modalcontent {
+position: relative;
+/*grid is kinda redundant*/
+display: grid;
+/* The line below will create as many rows as needed based on the content */
+grid-template-rows: repeat(auto-fill, minmax(min-content, max-content));
 /*border: solid red;*/
-background-color: white;
-color: black;
+color: whitesmoke;
 padding: 20px;
-
 }
 
+.closemodal::before,
+.closemodal::after {
+background: white;
+}
 
+.titleModal{
+padding: 22px 0 3px 0;
+margin: 0;
+}
 
+.roleModal{
+font-size: 16.9px;
+font-weight: 300;
+padding: 0;
+margin: 0;
+}
+
+.textModalContent{
+padding: 0;
+margin: 0;
+}
+
+.borderForModal{
+border-top: 1px solid grey;
+}
 
 /*.about-text {*/
 /*    !*padding: 1px;*!*/
