@@ -592,7 +592,7 @@ footer{
 /*for company logos, in the the phone appearance*/
 /*check if the phone format accepts it*/
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 767px) {
 
         /*second shrink*/
         .companys img{
