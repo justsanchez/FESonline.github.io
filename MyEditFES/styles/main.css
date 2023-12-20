@@ -418,8 +418,8 @@ background-color: #4169E1;
 
     grid-template-columns: 2fr;
     justify-content: center;
-
-    padding: 27px 100px;
+    /*can make this */
+    padding: 27px 120px;
   }
 
     .text2{
@@ -466,9 +466,12 @@ background-color: #4169E1;
 
     .companys img{
 
-        width: 20%;
-        /*aspect-ratio: 4/2;*/
+        /*width: 20%;*/
+
         padding: 10px 50px;
+        max-width: 274px; /* Ensures the image does not exceed its container's width */
+        height: auto;    /* Maintains the image's aspect ratio */
+
     }
 .smooth-hover {
     opacity: 1;
@@ -547,9 +550,10 @@ footer{
     margin: 0 40px 0 40px ;
 
 }
+    /*first shrink*/
     .companys img{
 
-        width: 27%;
+        /*width: 29%;*/
         /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
     }
@@ -565,15 +569,22 @@ footer{
     align-items: center;
   }
 
+/*making it less skinny when it shrinks*/
+.text{
+    padding: 27px 60px;
+  }
+
 }
 
-/*for company logos*/
+/*for company logos, in the the phone appearance*/
 /*check if the phone format accepts it*/
+
 @media screen and (max-width: 630px) {
 
+        /*second shrink*/
         .companys img{
 
-        width: 35%;
+        /*width: 35%;*/
         /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
     }
