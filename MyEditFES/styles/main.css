@@ -309,15 +309,11 @@ after the specified element.
 
 /*video adjustments*/
 
-
-
-/*this means that it should cover all of the given screen*/
-
 .video-container {
     /*optional if you dont want the video to start off beneath the nav*/
     /*top: 53px;*/
     position: initial;
-    max-width: 100%;
+    width: 100%;
     /*editing the size of the video*/
     max-height: 80vh;
 }
@@ -422,8 +418,8 @@ background-color: #4169E1;
 
     grid-template-columns: 2fr;
     justify-content: center;
-    /*can make this */
-    padding: 27px 120px;
+
+    padding: 27px 100px;
   }
 
     .text2{
@@ -470,12 +466,9 @@ background-color: #4169E1;
 
     .companys img{
 
-        /*width: 20%;*/
-
+        width: 20%;
+        /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
-        max-width: 274px; /* Ensures the image does not exceed its container's width */
-        height: auto;    /* Maintains the image's aspect ratio */
-
     }
 .smooth-hover {
     opacity: 1;
@@ -554,10 +547,9 @@ footer{
     margin: 0 40px 0 40px ;
 
 }
-    /*first shrink*/
     .companys img{
 
-        /*width: 29%;*/
+        width: 27%;
         /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
     }
@@ -573,22 +565,15 @@ footer{
     align-items: center;
   }
 
-/*making it less skinny when it shrinks*/
-.text{
-    padding: 27px 60px;
-  }
-
 }
 
-/*for company logos, in the the phone appearance*/
+/*for company logos*/
 /*check if the phone format accepts it*/
-
 @media screen and (max-width: 630px) {
 
-        /*second shrink*/
         .companys img{
 
-        /*width: 35%;*/
+        width: 35%;
         /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
     }
