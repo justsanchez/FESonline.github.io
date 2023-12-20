@@ -419,7 +419,7 @@ background-color: #4169E1;
     grid-template-columns: 2fr;
     justify-content: center;
 
-    padding: 27px 127px;
+    padding: 27px 100px;
   }
 
     .text2{
@@ -509,6 +509,7 @@ background-color: #4169E1;
 }
 
 
+
 footer{
     /*doesnt need to be black*/
     background-color: black;
@@ -541,6 +542,7 @@ footer{
 
 
 
+
 .text2{
     margin: 0 40px 0 40px ;
 
@@ -551,6 +553,17 @@ footer{
         /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
     }
+
+  .call-to-action{
+    /*border: solid red;*/
+    /*margin: 0 17px;*/
+    display: grid;
+
+    grid-template-columns: 1fr;
+    justify-content: center;
+    /*margin: 0 120px; !* Horizontal centering *!*/
+    align-items: center;
+  }
 
 }
 
@@ -896,10 +909,11 @@ nav a {
 
 /* Styling for the 'checkbox' class unordered list */
 .checkbox {
-  margin: 0 auto;
-  display: block;
-  list-style: none;
-  width: 90%;
+    margin: 0 auto;
+    display: block;
+    list-style: none;
+    width: 90%;
+    padding: 0;
 }
 
 
