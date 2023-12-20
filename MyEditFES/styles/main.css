@@ -309,11 +309,15 @@ after the specified element.
 
 /*video adjustments*/
 
+
+
+/*this means that it should cover all of the given screen*/
+
 .video-container {
     /*optional if you dont want the video to start off beneath the nav*/
     /*top: 53px;*/
     position: initial;
-    width: 100%;
+    max-width: 100%;
     /*editing the size of the video*/
     max-height: 80vh;
 }
