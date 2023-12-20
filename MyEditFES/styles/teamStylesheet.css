@@ -418,6 +418,7 @@ top: 405px;
 max-width: 490px;
 background: linear-gradient(to bottom, #001f3f, #0c0f24);
 
+
 }
 
 .imgSizingonCard {
@@ -434,4 +435,11 @@ width: 100%; /* Set the width to 300 pixels */
 height: 100%; /* Set the height to 200 pixels */
 }
 
+}
+@media screen and (max-width: 767px) {
+.modalcontent{
+  font-size: 14px;
+
+
+}
 }
