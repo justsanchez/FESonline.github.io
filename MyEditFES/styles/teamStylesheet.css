@@ -385,3 +385,53 @@ https://www.youtube.com/watch?v=rnhoY5Cdmy0
 /*}*/
 
 /*end of Animated background settings*/
+
+
+/*first shrink if needed*/
+/*@media screen and (max-width: 1180px) {*/
+
+/*}*/
+
+/*second shrink*/
+
+/*possible solution when restricting scrolling*/
+/*restrict based on how long the modal is (if that possible)*/
+@media screen and (max-width: 886px) {
+
+.modalstyles {
+grid-template-columns: 1fr;
+top: -1px;
+/*have to change this whenever the aspect ratio shrinks*/
+max-width: 490px;
+/*border: solid red 1px;*/
+/*background: rgba(0, 0, 0, 0); !* Fully transparent red background *!*/
+
+}
+
+/*make the grid values differnt, make the second bigger than the first*/
+/*another possible solution*/
+.modalcontent{
+      /*border: solid red 1px;*/
+
+position: fixed;
+top: 405px;
+max-width: 490px;
+background: linear-gradient(to bottom, #001f3f, #0c0f24);
+
+}
+
+.imgSizingonCard {
+padding: 0;
+margin: 0;
+
+
+max-width: 100%;
+max-height: 100%;
+
+/*temporary, just find a specific format size and stick with it */
+/*this is what makes the img stretched alittle*/
+width: 100%; /* Set the width to 300 pixels */
+height: 100%; /* Set the height to 200 pixels */
+}
+
+}
