@@ -396,6 +396,20 @@ video {
       /*background-color: crimson;*/
 }
 
+/*in the beginning of every page*/
+.title{
+        /*border: solid red;*/
+
+    margin: 10px 0 0 30px ;
+      /*margin: 0 auto; !* Horizontal centering *!*/
+
+    width: min(100%,1200px);
+
+    font-size: 350%;
+
+
+}
+
   .call-to-action{
     /*border: solid red;*/
     /*margin: 0 17px;*/
@@ -602,9 +616,11 @@ footer{
         padding: 10px 50px;
     }
 
+
 }
 
 /*media queries should always go at the bottom*/
+/*just a reminder*/
 
 @media screen and (min-width: 1180px) {
 
