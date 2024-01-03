@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--HTML CHECKER-->
-<!--https://validator.w3.org/nu/#textarea-->
-    
 <!--The FES icon on the tab-->
     <link rel="shortcut FES icon" href="../images/IMG_4238.jpg">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/eventStylesheet.css">
     <title>Futuros En STEM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,13 +19,13 @@
 </head>
 <body>
 
-<!--<div id="loading-overlay">-->
-<!--    <div class="logo-tab">-->
-<!--        <img  src="images/FESWEBLogo(croppedKeep).PNG" alt="Futuros En Stem Logo">-->
-<!--    </div>-->
-<!--    <br>-->
-<!--  <div class="spinner"></div>-->
-<!--</div>-->
+<div id="loading-overlay">
+    <div class="logo-tab">
+        <img  src="../images/FESWEBLogo(croppedKeep).PNG" alt="Futuros En Stem Logo">
+    </div>
+    <br>
+  <div class="spinner"></div>
+</div>
 
 
 
@@ -37,15 +35,12 @@
 
 
 
-<!--this is the one im going to use-->
 <header>
-  
     <div class="logo-tab">
-      <a href="index.html"></a>
+          <a href="index.html">
         <img id="main_logo" src="../images/FESWEBLogo(croppedKeep).PNG" alt="Futuros En Stem Logo">
-      </a>
-      </div>
-    
+    </a>
+    </div>
   <input type="checkbox" id="nav-toggle" class="nav-toggle">
   <nav>
     <ul>
@@ -58,13 +53,13 @@
       <li><a href="#">Contact Us</a></li>
     </ul>
   </nav>
-  <div id="logos">
+  <div class="logosNAV">
     <div align="center" class="socialbtns">
 <ul>
 <!--<li><a href="#" class="fa fa-lg fa-facebook"></a></li>-->
 <!--<li><a href="#" class="fa fa-lg fa-github"></a></li>-->
-    <li><a id="instaIcon" href="https://instagram.com/futurosenstem?igshid=MzRlODBiNWFlZA==" class="fa fa-lg fa-instagram"></a></li>
-    <li><a id="linkedinIcon" href="https://www.linkedin.com/company/futuros-en-stem/" class="fa fa-lg fa-linkedin"></a></li>
+    <li><a class="instaIcon fa fa-lg fa-instagram" href="https://instagram.com/futurosenstem?igshid=MzRlODBiNWFlZA=="></a></li>
+    <li><a class="linkedinIcon fa fa-lg fa-linkedin" href="https://www.linkedin.com/company/futuros-en-stem/"></a></li>
 <!--<li><a href="#" class="fa fa-lg fa-youtube"></a></li>-->
 </ul>
     </div>
@@ -78,8 +73,6 @@
 
 </header>
 
-<!--possible solution!, so the nav bar wouldnt always be on top
-just include it the grid column-->
 
 
 
@@ -88,22 +81,72 @@ just include it the grid column-->
 
 
 
-
-
-
-<!--<p> Have the logo on the top left and on the bottem of it to have the words that change every certain sec</p>-->
-<!--<p> like on the INSTA vid</p>-->
-
-
-<!--to have a solid background color with some blurred circles
-use figma source: https://youtu.be/hd8IAtXS-Kw-->
 <div class="structure">
     <div class="container">
         <div>
-            <h1>Events tab under construction</h1>
-            <img class="centered-gif" src="../video/underconstruction.gif" alt="Your GIF Description">
+<!--            <img class="imgSizing" src="../images/uncwPicture2.jpg" alt="Your GIF Description">-->
+            <h4 class="eventTabTitle">Upcoming <span style="color: #4169E1">Events</span></h4>
 
         </div>
+
+
+<!--for the event box split into two (picture and info on the right)-->
+            <div class="eventBox">
+                <!--for the image-->
+                <div class="eventImgBox">
+                <img class="imgSizing" src="../images/lenovoEventImage.png" alt="Your GIF Description">
+                </div>
+                <div class="infoBox">
+                    <div class="eventTitle">
+<!--maybe look for a different font style-->
+                        <p>Event Title</p>
+                    </div>
+
+                    <div class="eventInfo">
+                        <p>
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Wed, Jan 12 (edit date here)
+                             |
+                             <i class="fa fa-clock-o" aria-hidden="true"></i> 11 AM - 3 PM (edit time here)
+                        </p>
+                        <p>
+                             <i class="fa fa-map-marker" aria-hidden="true"></i> Congdon Hall (edit location here)
+                        </p>
+                    </div>
+                    <div class="eventDesc">
+                        <p>Curious about Lenovo's innovative tech solutions and envisioning a future with them? Join us for an exclusive event! Discover Lenovo's work culture, explore potential career paths, and gain insights into the dynamic world of tech. Don't miss this opportunity to shape your future career!</p>
+                    </div>
+
+                </div>
+            </div><!--for the event box split into two (picture and info on the right)-->
+            <div class="eventBox">
+                <!--for the image-->
+                <div class="eventImgBox">
+                <img class="imgSizing" src="../images/lenovoEventImage.png" alt="Your GIF Description">
+                </div>
+                <div class="infoBox">
+                    <div class="eventTitle">
+<!--maybe look for a different font style-->
+                        <p>Event Title</p>
+                    </div>
+
+                    <div class="eventInfo">
+                        <p>
+                            <i class="fa fa-calendar" aria-hidden="true"></i> Wed 12 Jan (edit date here)
+                             |
+                             <i class="fa fa-clock-o" aria-hidden="true"></i> 11 AM - 3 PM (edit time here)
+                        </p>
+                        <p>
+                             <i class="fa fa-map-marker" aria-hidden="true"></i> Congdon Hall (edit location here)
+                        </p>
+                    </div>
+                    <div class="eventDesc">
+                        <p>Curious about Lenovo's innovative tech solutions and envisioning a future with them? Join us for an exclusive event! Discover Lenovo's work culture, explore potential career paths, and gain insights into the dynamic world of tech. Don't miss this opportunity to shape your future career!</p>
+                    </div>
+
+                </div>
+            </div>
+
+
     </div>
 </div>
 
