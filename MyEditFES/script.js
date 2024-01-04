@@ -31,7 +31,7 @@ modalLinks.forEach(link => {
     const scrollHandler = () => {
       // Limit scrolling to 100 pixels below the initial scroll position
       if (window.scrollY > initialScroll || window.scrollY < initialScroll) {
-        window.scrollTo(initialScroll+2, initialScroll + 50);
+        window.scrollTo(initialScroll+2, initialScroll + 25);
         console.log("done")
       }
     };

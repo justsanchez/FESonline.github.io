@@ -189,6 +189,8 @@ height: 100%; /* Set the height to 200 pixels */
 /*padding: 10px;*/
 }
 
+
+
 /*make it say, "click anywhere to exit" */
 .modalstyles {
 /*takes the borders away*/
@@ -398,6 +400,14 @@ https://www.youtube.com/watch?v=rnhoY5Cdmy0
 /*restrict based on how long the modal is (if that possible)*/
 @media screen and (max-width: 886px) {
 
+  .modaloverlay {
+  background: rgba(0, 0, 0, 0.9);
+
+
+
+
+}
+
 .modalstyles {
 grid-template-columns: 1fr;
 top: -1px;
@@ -412,9 +422,11 @@ max-width: 490px;
 /*another possible solution*/
 .modalcontent{
       /*border: solid red 1px;*/
-
+font-size: 14px;
 position: fixed;
-top: 405px;
+
+/*  this is the main focus in being able to use the website on mobile*/
+top: 408px;
 max-width: 490px;
 background: linear-gradient(to bottom, #001f3f, #0c0f24);
 
@@ -438,7 +450,7 @@ height: 100%; /* Set the height to 200 pixels */
 }
 @media screen and (max-width: 767px) {
 .modalcontent{
-  font-size: 14px;
+  font-size: 12px;
 
 
 }
