@@ -1,3 +1,7 @@
+
+
+// saving previous version
+
 //for loading spinner
 window.addEventListener('load', () => {
   const loadingOverlay = document.getElementById('loading-overlay');
