@@ -62,6 +62,8 @@ modalLinks.forEach(link => {
       //look at this to 'limit' scrolling on modal open
       //https://youtu.be/V9CY0F4Wc7M?si=xTwKTskCcdQuomcW
       document.body.style.overflow = "auto";
+      window.removeEventListener('scroll', scrollHandler);
+
 
     });
   });
