@@ -1,7 +1,3 @@
-
-
-// saving previous version
-
 //for loading spinner
 window.addEventListener('load', () => {
   const loadingOverlay = document.getElementById('loading-overlay');
@@ -9,59 +5,6 @@ window.addEventListener('load', () => {
 });
 
 
-//
-// //pop up window
-// const openModalButtons= document.querySelectorAll('[data-modal-target]');
-// const closeModalButtons= document.querySelectorAll('[data-close-button]');
-// const overlay= document.getElementById('overlay');
-//
-// openModalButtons.forEach(button =>{
-//   button.addEventListener('click', () => {
-//     const modal = document.querySelector(button.dataset.modalTarget)
-//     openModal(modal)
-//   })
-// })
-//
-// overlay.addEventListener('click', () => {
-//   const modals= document.querySelectorAll('.modal.active')
-//   modals.forEach(modal =>{
-//     closeModal(modal)
-//   })
-// })
-//
-//
-// closeModalButtons.forEach(button =>{
-//   button.addEventListener('click', () => {
-//     const modal = button.closest('.modal')
-//     closeModal(modal)
-//   })
-// })
-//
-// function openModal(modal){
-//   if (modal==null) return
-//   modal.classList.add('active')
-//   overlay.classList.add('active')
-// }
-//
-// function closeModal(modal){
-//   if (modal==null) return
-//   modal.classList.remove('active')
-//   overlay.classList.remove('active')
-// }
-
-// //popup window attempt two
-//
-// $('#edit').on('click', function(){
-//   $('body').addClass('active-modal');
-//   $('.box-modal').addClass('modal-show');
-// });
-//
-// $('.overlay').on('click', function(){
-//   $('body').removeClass('active-modal');
-//   $('.box-modal').removeClass('modal-show');
-// })
-//
-//
 
 //popup window attempt three
 // Get all modal links
@@ -77,8 +20,25 @@ modalLinks.forEach(link => {
 
     // Display the modal (fade-in effect)
     modal.style.display = 'block';
+    // document.body.style.overflow = "hidden";
   //  to prevent scrolling
-  document.body.style.overflow = "hidden";
+  //  try to figure out how to restrict scrolling to a certain amount
+  //   document.body.style.overflow = "hidden";
+
+    const initialScroll = window.scrollY;
+
+    // Add a scroll event listener
+    const scrollHandler = () => {
+      // Limit scrolling to 100 pixels below the initial scroll position
+      if (window.scrollY > initialScroll || window.scrollY < initialScroll) {
+        window.scrollTo(initialScroll+2, initialScroll + 50);
+        console.log("done")
+      }
+    };
+    window.addEventListener('scroll', scrollHandler);
+
+
+
 
 
     // Close modal when clicking outside of it
@@ -87,6 +47,8 @@ modalLinks.forEach(link => {
         this.style.display = 'none';
         // to enable scrolling
         document.body.style.overflow = "auto";
+
+        window.removeEventListener('scroll', scrollHandler);
 
       }
     });
@@ -97,6 +59,8 @@ modalLinks.forEach(link => {
       e.preventDefault();
       modal.style.display = 'none';
       // to enable scrolling
+      //look at this to 'limit' scrolling on modal open
+      //https://youtu.be/V9CY0F4Wc7M?si=xTwKTskCcdQuomcW
       document.body.style.overflow = "auto";
 
     });
