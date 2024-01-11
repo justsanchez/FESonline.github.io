@@ -932,6 +932,10 @@ nav a {
 
 }
 
+.card-info .mentorColor{
+    color: #d1a41a;
+}
+
 /* Button styles */
 .button {
   display: inline-block;
