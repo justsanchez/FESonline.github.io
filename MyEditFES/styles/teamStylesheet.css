@@ -146,12 +146,14 @@ margin: 1000px 0; /* Add margin to create space above and below the text */
 }
 
 .card-info p:hover {
+
 border-color: #afd8e9; /* Change the border color to green on hover */
 }
 
 
 /*just to make the cards hover only in the team page*/
 .card:hover {
+
 transform: translate(0, -0.45%);
 
 }
@@ -212,8 +214,7 @@ background: linear-gradient(to bottom, #001f3f, #0c0f24);
 }
 
 .modalcontent {
-  /* removing this fixed the button bug */
-/* position: relative; */
+/*position: relative;*/
 /*grid is kinda redundant*/
 display: grid;
 /* The line below will create as many rows as needed based on the content */
@@ -223,6 +224,26 @@ color: whitesmoke;
 padding: 20px;
 }
 
+.iconStyle{
+    /*border: solid red;*/
+  margin: 10px 32px 0 0;
+  /*width: 50%;*/
+  /*border: 3px solid green;*/
+  /*padding: 10px;*/
+    text-decoration: none;
+
+
+}
+
+
+
+/*.about-text:hover::after {*/
+/*  background: white;*/
+/*}*/
+
+
+
+
 .closemodal::before,
 .closemodal::after {
 background: white;
@@ -231,6 +252,7 @@ background: white;
 .titleModal{
 padding: 22px 0 3px 0;
 margin: 0;
+
 }
 
 .roleModal{
@@ -427,7 +449,7 @@ font-size: 14px;
 position: fixed;
 
 /*  this is the main focus in being able to use the website on mobile*/
-top: 408px;
+top: 388px;
 max-width: 490px;
 background: linear-gradient(to bottom, #001f3f, #0c0f24);
 
@@ -449,15 +471,15 @@ height: 100%; /* Set the height to 200 pixels */
 }
 
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
   .modalstyles {
     /*border: solid red;*/
-    width: 70%;
+    width: 80%;
   }
 
 
 .modalcontent{
-  width: 70%;
+  width: 80%;
   font-size: 12px;
 
 
