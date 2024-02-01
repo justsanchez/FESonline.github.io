@@ -449,9 +449,17 @@ height: 100%; /* Set the height to 200 pixels */
 }
 
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 490px) {
+  .modalstyles {
+    /*border: solid red;*/
+    width: 70%;
+  }
+
+
 .modalcontent{
+  width: 70%;
   font-size: 12px;
+
 
 
 }
