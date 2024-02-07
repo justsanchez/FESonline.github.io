@@ -224,6 +224,11 @@ color: whitesmoke;
 padding: 20px;
 }
 
+.showPhone{
+  display: none;
+
+}
+
 .iconStyle{
     /*border: solid red;*/
   margin: 10px 32px 0 0;
@@ -423,6 +428,8 @@ https://www.youtube.com/watch?v=rnhoY5Cdmy0
 /*restrict based on how long the modal is (if that possible)*/
 @media screen and (max-width: 886px) {
 
+
+
   .modaloverlay {
   background: rgba(0, 0, 0, 0.9);
 
@@ -452,9 +459,14 @@ position: fixed;
 top: 388px;
 max-width: 490px;
 background: linear-gradient(to bottom, #001f3f, #0c0f24);
-
+line-height: 1.3;
 
 }
+
+
+
+
+
 
 .imgSizingonCard {
 padding: 0;
@@ -471,12 +483,39 @@ height: 100%; /* Set the height to 200 pixels */
 }
 
 }
+
+/*move whatever you do here to the 500px quer*/
+@media screen and (max-width: 886px) {
+  .showPhone{
+    display: block;
+    padding: 5px 0 7px 0;
+
+  }
+
+  .showDesktop{
+    display: none;
+  }
+
+
+}
+
+
+
 @media screen and (max-width: 500px) {
+
+
+
+
+
   .modalstyles {
     /*border: solid red;*/
     width: 80%;
   }
 
+/*can make it bigger */
+/*  for it to not be so crammed:
+  -make it as when the screen is smaller just show a a summerized paragraph
+  */
 
 .modalcontent{
   width: 80%;
@@ -485,4 +524,6 @@ height: 100%; /* Set the height to 200 pixels */
 
 
 }
+
+
 }
