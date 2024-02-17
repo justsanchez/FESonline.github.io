@@ -41,14 +41,14 @@ margin: 0 auto; /* Horizontal centering */
 
 
 /*a good setting is 50px*/
-gap: 50px; !important;
+gap: 50px; 
 }
 
 
 .card{
 
 /*edit the gap between the pictures*/
-margin: 32px; !important;
+margin: 32px; 
 
 /*you can add a small border here using padding*/
 /*padding: 5px;*/
