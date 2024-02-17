@@ -6,6 +6,7 @@
 
 
 html{
+
     /*font color*/
     color: white;
     /*width to cover the whole page*/
@@ -808,7 +809,10 @@ nav a {
     display: inline-block;
 }
 
+
+
 .socialbtns .fa {
+    position: static;
 	color: #FFF;
 	text-shadow: 1px 1px 0 #000,
 			1px -1px 0 #000,
@@ -826,10 +830,10 @@ nav a {
 			1px -1px 0 #000,
 			-1px 1px 0 #000,
 			-1px -1px 0 #000;
-	transition: all ease-out 0.5s;
-	-moz-transition: all ease-out 0.5s;
-	-webkit-transition: all ease-out 0.5s;
-	-o-transition: all ease-out 0.5s;
+  -webkit-tap-highlight-color: transparent;	/*-moz-transition: all ease-out 0.5s;*/
+	/*-webkit-transition: all ease-out 0.5s;*/
+	/*-o-transition: all ease-out 0.5s;*/
+    /*transform: none;*/
 }
 
 
@@ -859,6 +863,7 @@ nav a {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 999;
+
 
 
 
@@ -1071,5 +1076,3 @@ nav a {
     margin: 0 auto;
     text-align: center;
 }
-
-
