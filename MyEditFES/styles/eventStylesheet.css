@@ -1,91 +1,126 @@
 /*Stylesheet for the Events Tab*/
 
-
-.eventTabTitle{
-    margin: 10px 0 0 30px ;
-      /*margin: 0 auto; !* Horizontal centering *!*/
-    width: min(100%,1200px);
-    font-size: 350%;
-}
-.eventBox{
-    width: 80%;
-    padding: 0;
-    margin: 10px 0 0 30px ;
-    display: grid;
-    grid-template-columns: .35fr .65fr;
-    border-bottom: solid .1px slategrey;
-
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/*adding some borders*/
-.imgSizing{
-    width: 300px;
-    padding: 3px 3px;
-
-}
-.eventImgBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-.eventTitle{
-    font-size: 150%;
-}
-
-.eventInfo{
-    font-size: 69%;
-
-}
-
-.eventDesc{
-    font-size: 90%;
-    /*background-color: red;*/
-    width: 100%;
-}
-
-
-/*possible solution when restricting scrolling*/
-/*restrict based on how long the modal is (if that possible)*/
-@media screen and (max-width: 886px) {
-
-
-
-}
-
-/*iphone media query*/
-@media screen and (max-width: 767px) {
-    .eventBox {
-    grid-template-columns: 1fr;
-    top: -1px;
-    max-width: 520px;
-
-
-}
-
-    /*make the grid values different, make the second bigger than the first*/
-    /*another possible solution*/
-    .modalcontent{
-            position: fixed;
-    top: 405px;
-    /*max-width: 490px;*/
-    background: linear-gradient(to bottom, #001f3f, #0c0f24);
-
-        font-size: 14px;
-        max-width: 520px;
-
-
-    }
-    .imgSizing {
-    /*can modify the padding to make the nav bigger or smaller*/
-    /*padding: 9px;*/
-    width: 100%;
-}
-
-
-}
-
+.container{
+    place-items: normal;
+  
+  
+  }
+  
+      .infoBox{
+          /*border: solid red;*/
+              margin: 10px 0 0 40px ;
+          font-size: 120%;
+      }
+  
+  .title{
+      place-items: normal;
+  }
+  
+  
+  
+  .eventTabTitle{
+      margin: 10px 0 0 30px ;
+        /*margin: 0 auto; !* Horizontal centering *!*/
+      width: min(100%,1200px);
+      font-size: 350%;
+  }
+  .eventBox{
+  
+      width: 85%;
+      padding: 0;
+      margin: 10px 0 0 30px ;
+      display: grid;
+      grid-template-columns: .37fr .63fr;
+      border-bottom: solid .1px slategrey;
+  
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  
+  /*adding some borders*/
+  .imgSizing{
+      width: 300px;
+      padding: 3px 3px;
+  
+  }
+  .eventImgBox{
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  
+  
+  .eventTitle{
+      font-size: 120%;
+  }
+  
+  .eventInfo{
+      font-size: 69%;
+  
+  }
+  
+  .eventDesc{
+      font-size: 90%;
+      /*background-color: red;*/
+      width: 100%;
+  }
+  
+  
+  /*possible solution when restricting scrolling*/
+  /*restrict based on how long the modal is (if that possible)*/
+  @media screen and (max-width: 886px) {
+  
+  
+  
+  }
+  
+  /*iphone media query*/
+  @media screen and (max-width: 767px) {
+      .eventBox {
+      grid-template-columns: 1fr;
+      top: -1px;
+      max-width: 520px;
+  
+  
+  }
+  
+  
+      .container{
+          place-items: center;
+  
+      }
+         .container .title{
+             margin: 0;
+  
+  
+      }
+          .eventBox{
+      margin: 0;
+          }
+  
+      /*make the grid values different, make the second bigger than the first*/
+      /*another possible solution*/
+      .modalcontent{
+  
+              position: fixed;
+      top: 405px;
+      /*max-width: 490px;*/
+      background: linear-gradient(to bottom, #001f3f, #0c0f24);
+  
+          font-size: 14px;
+          max-width: 520px;
+  
+  
+      }
+      .imgSizing {
+      /*can modify the padding to make the nav bigger or smaller*/
+      /*padding: 9px;*/
+      width: 100%;
+  }
+  
+  
+  }
+  
+  
