@@ -151,6 +151,13 @@
       .cardsMentorsR{
           margin: 0 80px 0 80px;
       }
+  
+      .cardContainer{
+  
+      width: 92%;
+  
+  
+  }
   }
   @media screen and (max-width: 1300px) {
   
@@ -170,5 +177,13 @@
       .showDesktop{
           display: none;
       }
+  
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+  
+  
+  
   
   }
