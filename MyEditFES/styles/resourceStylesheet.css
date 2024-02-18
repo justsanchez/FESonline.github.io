@@ -101,6 +101,7 @@
   
   
   .allInfoContainer{
+  
       margin-bottom: 20px;
   
           /*border: solid red;*/
@@ -162,6 +163,8 @@
   @media screen and (max-width: 1300px) {
   
   .allInfoContainer{
+          text-align: center;
+          margin: 10px 40px 0 40px ;
           /*border: solid red;*/
       display: grid;
       grid-template-columns: 1fr;
