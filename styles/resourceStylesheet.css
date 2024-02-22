@@ -193,7 +193,7 @@ font-size: 18px
 }
 @media screen and (max-width: 1300px) {
     html {
-        overflow-y: hidden;
+        overflow-x: hidden;
       }
 
 .allInfoContainer{
