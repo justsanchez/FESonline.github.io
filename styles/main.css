@@ -399,7 +399,7 @@ video {
 
 /*in the beginning of every page*/
 .title{
-        /*border: solid red;*/
+        border: solid red;
 
     margin: 10px 0 0 30px ;
       /*margin: 0 auto; !* Horizontal centering *!*/
