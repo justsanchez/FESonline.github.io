@@ -428,6 +428,10 @@ https://www.youtube.com/watch?v=rnhoY5Cdmy0
 /*restrict based on how long the modal is (if that possible)*/
 @media screen and (max-width: 886px) {
 
+  html {
+    overflow-y: hidden;
+  }
+
 
 
   .modaloverlay {

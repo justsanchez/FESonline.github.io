@@ -78,6 +78,10 @@
   
   /*iphone media query*/
   @media screen and (max-width: 767px) {
+
+    html {
+        overflow-y: hidden;
+      }
       .eventBox {
       grid-template-columns: 1fr;
       top: -1px;
