@@ -189,9 +189,7 @@ height: 100%; /* Set the height to 200 pixels */
 /*    max-width: 405px;*/
 /*}*/
 
-.socialbtns{
-/*padding: 10px;*/
-}
+
 
 
 
@@ -257,7 +255,8 @@ background: white;
 }
 
 .titleModal{
-padding: 22px 0 3px 0;
+  border: solid red;
+padding: 22px 0 0 0;
 margin: 0;
 
 }
