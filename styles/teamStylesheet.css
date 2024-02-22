@@ -5,7 +5,9 @@
 
 /*choose a good font for website*/
 
-
+html {
+  overflow-x: hidden;
+}
 
 .container h4{
   /*border: solid red;*/
@@ -428,9 +430,7 @@ https://www.youtube.com/watch?v=rnhoY5Cdmy0
 /*restrict based on how long the modal is (if that possible)*/
 @media screen and (max-width: 886px) {
 
-  html {
-    overflow-x: hidden;
-  }
+
 
 
 

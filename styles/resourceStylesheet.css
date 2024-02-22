@@ -1,6 +1,8 @@
 /*Stylesheet for the Resources Tab*/
 
-
+html {
+    overflow-x: hidden;
+  }
 
 
 .container h4{
@@ -192,9 +194,7 @@ font-size: 18px
 }
 }
 @media screen and (max-width: 1300px) {
-    html {
-        overflow-x: hidden;
-      }
+
 
 .allInfoContainer{
 
