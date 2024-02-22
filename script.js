@@ -1,7 +1,7 @@
 
 
 // saving previous version
-
+document.body.style.overflowX = "hidden";
 //for loading spinner
 window.addEventListener('load', () => {
   const loadingOverlay = document.getElementById('loading-overlay');
