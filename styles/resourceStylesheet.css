@@ -59,8 +59,8 @@ font-size: 180%;
     padding: 20px 0;
       /*margin: 0 auto; !* Horizontal centering *!*/
 
-    width: min(100%,1200px);
-
+    /* width: min(100%,1200px); */
+/*  */
     font-size: 280%;
 
 }
