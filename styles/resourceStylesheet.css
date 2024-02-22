@@ -17,6 +17,10 @@
   
   
   }
+  .herobanner{
+      width: 100%;
+  }
+  
   /*center the img*/
   .imgSizing{
       max-width: 580px;
@@ -48,14 +52,34 @@
       /*padding: 500px 500px;*/
     margin: 0 auto;
   }
+  .mentorTitle{
+  
+  
+      margin: 0 30px 0 20px ;
+      padding: 20px 0;
+        /*margin: 0 auto; !* Horizontal centering *!*/
+  
+      width: min(100%,1200px);
+  
+      font-size: 280%;
+  
+  }
   
   .allInfoContainer .infoContainer{
-  
-      margin: 10px 30px 0 30px ;
+      /*border: solid red;*/
+      margin: 0 30px 0 20px ;
       /*width: min(100%,1200px);*/
   
   
   }
+  
+  /*.infoContainer{*/
+  /*  display: flex;*/
+  /*  align-items: center;*/
+  /*  justify-content: center; !* Also centers horizontally *!*/
+  
+  
+  /*}*/
   
   .missionStatement{
       font-size: 13px;
@@ -171,16 +195,14 @@
   
   .allInfoContainer{
   
-          margin: 10px 30px 0 30px ;
+          margin: 0 30px 0 30px ;
           /*border: solid red;*/
       display: grid;
       grid-template-columns: 1fr;
   
   }
   
-      .teachingStatement{
-      /*text-align: center;*/
-      }
+
   
   
       .showPhone{
