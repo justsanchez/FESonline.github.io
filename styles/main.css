@@ -399,14 +399,14 @@ video {
 
 /*in the beginning of every page*/
 .title{
-        border: solid red;
+        /* border: solid red; */
 
     margin: 10px 0 0 30px ;
       /*margin: 0 auto; !* Horizontal centering *!*/
 
-    width: min(100%,1200px);
+    /* width: min(100%,1200px); */
 
-    font-size: 350%;
+    /* font-size: 350%; */
 
 
 }
