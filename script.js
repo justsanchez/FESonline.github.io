@@ -1,7 +1,4 @@
 
-
-// saving previous version
-document.body.style.overflowX = "hidden";
 //for loading spinner
 window.addEventListener('load', () => {
   const loadingOverlay = document.getElementById('loading-overlay');
@@ -103,8 +100,28 @@ modalLinks.forEach(link => {
   });
 });
 
+// Select the checkbox and document body
+const navToggleCheckbox = document.querySelector('.nav-toggle');
+const bodyElement = document.body;
+
+// Add event listener for clicks anywhere on the document
+document.addEventListener('click', function(event) {
+  // Check if the clicked element is not the checkbox itself
+  if (event.target !== navToggleCheckbox) {
+    // Check if the clicked element is not within the body element (to handle potential modals/overlays)
+    if (!event.target.isSameNode(bodyElement)) {
+      // Uncheck the checkbox if it's checked
+      if (navToggleCheckbox.checked) {
+        navToggleCheckbox.checked = false;
+      }
+    }
+  }
+});
+
+
 
 
 // leave last, its prone to mess up some code
 //scroll reveal
 ScrollReveal().reveal('.card', { easing: "ease-in" });
+
