@@ -1,11 +1,13 @@
 /*Stylesheet for the Events Tab*/
 
 
-
-
 .container{
     place-items: normal;
   
+  
+  }
+  .title{
+      padding: 57px 0 0 0;
   
   }
   
@@ -81,8 +83,6 @@
   
   /*iphone media query*/
   @media screen and (max-width: 767px) {
-
-
       .eventBox {
       grid-template-columns: 1fr;
       top: -1px;
@@ -96,11 +96,7 @@
           place-items: center;
   
       }
-         .container .title{
-             margin: 0;
   
-  
-      }
           .eventBox{
       margin: 0;
           }
