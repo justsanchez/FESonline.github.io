@@ -548,6 +548,12 @@ footer{
 /*media query for items to disappear*/
 @media screen and (max-width: 1180px) {
 
+    /*to make more space to users to click*/
+    nav a{
+      padding-right: 320px;
+  }
+
+
 .logosNAV{
     /*an alternative to using display: none*/
     position: absolute;
