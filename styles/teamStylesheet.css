@@ -189,6 +189,7 @@ grid-template-columns: 1fr 1fr;
 /*configure the size of the boxes here*/
 /*have to change this whenever the aspect ratio shrinks*/
 max-width: 890px;
+top: -12px;
 /*
 #2e3a8e (decent)
 #1c2464 (okay)
