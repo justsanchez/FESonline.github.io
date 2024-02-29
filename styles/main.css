@@ -646,6 +646,13 @@ footer{
 
 }
 
+@media screen and (max-width: 500px) {
+  nav a{
+  padding-right: 260px;
+}
+
+}
+
 /*media queries should always go at the bottom*/
 /*just a reminder*/
 
