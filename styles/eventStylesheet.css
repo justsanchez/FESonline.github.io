@@ -83,11 +83,12 @@
   }
   
   /*iphone media query*/
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 798px) {
       .eventBox {
       grid-template-columns: 1fr;
       top: -1px;
       max-width: 520px;
+          margin: 0;
   
   
   }
@@ -98,9 +99,9 @@
   
       }
   
-          .eventBox{
-      margin: 0;
-          }
+      .infoBox{
+          margin: 0;
+      }
   
       /*make the grid values different, make the second bigger than the first*/
       /*another possible solution*/
