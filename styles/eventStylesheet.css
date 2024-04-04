@@ -36,7 +36,7 @@
       margin: 10px 0 0 30px ;
       display: grid;
       grid-template-columns: .37fr .63fr;
-      border-bottom: solid .1px slategrey;
+      /* border-bottom: solid .1px slategrey; */
   
       justify-content: space-evenly;
       align-items: center;
