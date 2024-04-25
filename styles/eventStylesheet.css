@@ -92,6 +92,25 @@
       width: 100%;
   }
   
+
+  .eventBox2 {
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.eventBox2 h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.eventBox2 p {
+    color: white;
+    font-size: 18px;
+}
+
   
   /*possible solution when restricting scrolling*/
   /*restrict based on how long the modal is (if that possible)*/
