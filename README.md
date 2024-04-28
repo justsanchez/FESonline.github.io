@@ -52,7 +52,7 @@ Documentation:
 
 
 ## Getting started from scratch
-* Download Git (Might need homebrew): https://git-scm.com/downloads
+* Download Git (Might need homebrew first if on mac): https://git-scm.com/downloads
 * Make sure Node has properly downloaded:
 ```git -v```
 #### Download VS Code
