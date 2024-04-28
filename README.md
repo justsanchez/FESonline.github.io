@@ -51,7 +51,7 @@ Documentation:
 [JavaScript Documentation by DevDocs](https://devdocs.io/javascript/)
 
 
-## Getting started from scratch
+# Getting started from scratch
 * Download Git (Might need homebrew first if on mac): https://git-scm.com/downloads
 * Make sure Node has properly downloaded:
 ```git -v```
