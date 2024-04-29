@@ -1,3 +1,6 @@
+### Contributors
+- Alvaro Sanchez (Lead Web Developer)
+
 # Downloads
 
 ### HTML/CSS/JS
