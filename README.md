@@ -1,5 +1,6 @@
 ### Contributors
 - Alvaro Sanchez (Lead Web Developer)
+- Diego Ruiz Valencia (Web Developer)
 
 # Downloads
 
