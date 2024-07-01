@@ -4,7 +4,7 @@ Please include a summary of the changes and the related issue.
 
 
 Add issue number at the end
-https://github.com/justsanchez/FESonline.github.io/issues/
+Issue: https://github.com/justsanchez/FESonline.github.io/issues/
 
 
 ### Type of change
