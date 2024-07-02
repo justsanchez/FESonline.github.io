@@ -1,7 +1,7 @@
 ### Contributors
 - Alvaro Sanchez (Lead Web Developer)
 - Diego Ruiz Valencia (Web Developer)
-
+- Jovani Rivera-Hernandez (Web Developer)
 # Downloads
 
 ### HTML/CSS/JS
