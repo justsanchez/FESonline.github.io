@@ -83,7 +83,6 @@ eventBoxes.forEach((eventBox) => {
   } else if (dateString < formattedDate) {
     const eventBoxContainer = document.getElementById(eventId);
     eventBoxContainer.style.display="none";
-
   } else {
 
   }
