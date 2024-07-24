@@ -58,7 +58,7 @@ h3 {
 /* Info Summary Styles */
 
 .infoSummary {
-    margin: 5%;
+    margin: 4%;
 }
 
 
@@ -75,6 +75,7 @@ h3 {
 
 .infoContent a{
     color: #fff;
+    position: relative;
 }
 
 .infoContent a:hover, span:hover {
