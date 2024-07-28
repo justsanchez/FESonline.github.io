@@ -93,6 +93,7 @@ eventBoxes.forEach((eventBox) => {
 // Get all modal links
 const modalLinks = document.querySelectorAll(".button");
 
+
 // Add click event listeners to modal links
 modalLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
@@ -128,6 +129,21 @@ modalLinks.forEach((link) => {
 // Select the checkbox and document body
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
+
+let counter = 0
+
+// Add event listener for clicks anywhere on the document
+// handles when the menu is not being closed when clicked twice
+document.addEventListener("click", function (event) {
+  if (event.target === navToggleCheckbox) {
+    counter++;
+    console.log(counter);
+
+    if (counter>1) {
+      counter=0; // reseting the counter :|
+      navToggleCheckbox.checked=false;
+  }}
+})
 
 // Add event listener for clicks anywhere on the document
 document.addEventListener("click", function (event) {
