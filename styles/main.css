@@ -252,8 +252,6 @@ nav a:hover {
 
     /*used only when nav is not displayed*/
     /*display: block;*/
-
-
 }
 
 /*Notes
@@ -648,6 +646,12 @@ footer{
 }
 
 @media screen and (max-width: 500px) {
+  .logosNAV{
+    /* This should make it appear in mobile */
+    position: absolute;
+    top: 0;
+    left: 73%;
+  }
   nav a{
   padding-right: 260px;
 }
