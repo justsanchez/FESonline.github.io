@@ -557,8 +557,8 @@ footer{
 
 .logosNAV{
     /*an alternative to using display: none*/
-    position: fixed;
-    top: -9999px ; 
+    position: absolute;
+    top: -9999px ;
     left: -9999px ;
 }
 
@@ -617,14 +617,12 @@ footer{
 
 @media screen and (max-width: 767px) {
 
-
         /*second shrink*/
         .companys img{
 
         /*width: 35%;*/
         /*aspect-ratio: 4/2;*/
         padding: 10px 50px;
-
     }
     @media screen and (max-width: 767px) {
 
@@ -649,17 +647,9 @@ footer{
 
 }
 
-
 @media screen and (max-width: 500px) {
-  .logosNAV{
-    /* This should make it appear in mobile */
-    position: absolute;
-    top: 0;
-    left: 74%;
-  }
   nav a{
   padding-right: 260px;
-
 }
 
 }
@@ -668,8 +658,6 @@ footer{
 /*just a reminder*/
 
 @media screen and (min-width: 1180px) {
-
-  
 
   /*  media query settings for navigation starts here */
 
