@@ -128,21 +128,44 @@ modalLinks.forEach((link) => {
 // Select the checkbox and document body
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
+let counter = 0
 
-// Add event listener for clicks anywhere on the document
+// handles when the menu is not being closed when clicked twice
 document.addEventListener("click", function (event) {
+  if (event.target === navToggleCheckbox) {
+    counter++;
+    console.log(counter);
+    
+    if (counter>1) {
+      counter=0; // reseting the counter :|
+      navToggleCheckbox.checked=false;
+  }}
+
+
   // Check if the clicked element is not the checkbox itself
   if (event.target !== navToggleCheckbox) {
     // Check if the clicked element is not within the body element (to handle potential modals/overlays)
     if (!event.target.isSameNode(bodyElement)) {
       // Uncheck the checkbox if it's checked
       if (navToggleCheckbox.checked) {
-        navToggleCheckbox.checked = false;
+        navToggleCheckbox.checked = false ;
       }
     }
-  }
-});
+    else{
+      // Uncheck the checkbox if it's checked
+      if (navToggleCheckbox.checked) {
+        navToggleCheckbox.checked = false ;
+        }
+    }
 
-// leave last, its prone to mess up some code
+  }
+  
+
+
+
+  });
+
+
+// leave last, its prone t  o mess up some code
 //scroll reveal
 ScrollReveal().reveal(".card", { easing: "ease-in" });
