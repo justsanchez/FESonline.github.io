@@ -126,23 +126,22 @@ modalLinks.forEach((link) => {
   });
 });
 
-// Select the checkbox and document body
+
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
-
 let counter = 0
+navToggleCheckbox.checked=false;
 
 // Add event listener for clicks anywhere on the document
 // handles when the menu is not being closed when clicked twice
 document.addEventListener("click", function (event) {
   if (event.target === navToggleCheckbox) {
     counter++;
-    console.log(counter);
-
-    if (counter>1) {
+    if (counter > 1 ) {
       counter=0; // reseting the counter :|
       navToggleCheckbox.checked=false;
-  }}
+  }
+}
 })
 
 // Add event listener for clicks anywhere on the document
@@ -152,7 +151,11 @@ document.addEventListener("click", function (event) {
     // Check if the clicked element is not within the body element (to handle potential modals/overlays)
     if (!event.target.isSameNode(bodyElement)) {
       // Uncheck the checkbox if it's checked
-      if (navToggleCheckbox.checked) {
+      if (!(navToggleCheckbox.checked)) {
+        navToggleCheckbox.checked = false;
+        counter = 0;
+      }
+      else{
         navToggleCheckbox.checked = false;
       }
     }
@@ -160,5 +163,6 @@ document.addEventListener("click", function (event) {
 });
 
 // leave last, its prone to mess up some code
+
 //scroll reveal
 ScrollReveal().reveal(".card", { easing: "ease-in" });
