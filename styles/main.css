@@ -190,7 +190,7 @@ nav {
     transform-origin: top;
 
     /*to stop the glitch after the page is loaded turn to zero*/
-    transition: transform 400ms ease-in-out;
+    transition: transform 0ms ease-in-out;
 }
 
 /*Notes
@@ -268,9 +268,9 @@ after the specified element.
 */
 
 .nav-toggle:checked ~ nav a {
-    opacity: 1;
-    /*can modify the milliseconds*/
-    transition: opacity 250ms ease-in-out 250ms;
+  opacity: 1;
+  /*can modify the milliseconds*/
+  transition: opacity 20 ease-in-out 20ms;
 }
 
 
