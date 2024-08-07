@@ -1,84 +1,75 @@
 h1 {
-    font-size: 50px;
-    margin-bottom: -5%;
+    color: #4169E1;
+    margin: 40px 25% 25px;
 }
 
-h3 {
-    font-size: 25px;
-    margin-left: 8%;
-    margin-top: 5%;
+h2 {
+    margin: 10px 25%;
+}
+
+.welcomeParagraph {
+    color: #fff;
+    font-size: large;
+    margin: 0 27% 40px;
 }
 
 
-/* Card Grid Styles */
+/* Grid Styles */
 
-.cardGrid{
+.cardGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10% 31%;
     justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
     margin: auto;
 }
 
-/* Infor Card Styles */
+/* Card Styles */
 
-.infoCard{
-    width: 300px;
-    height: 400px;
-    background-image: linear-gradient(to top left,#121212, #000044);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+.card {
+    background-color: #fff;
+    background-image: linear-gradient( to bottom, #121212, #000044);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
-
-/* Info Styles */
-
-.info {
-    width: 100%;
-    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-.info img {
+.card:hover {
+    transform: translateY(-10px);
+    filter: grayscale(35%);
+}
+
+.cardImg {
     width: 100%;
-    height: 140px;
-    display: block;
-}
-
-/* Info Summary Styles */
-
-.infoSummary {
-    margin: 4%;
+    height: 200px;
+    object-fit: cover;
 }
 
 
-/* Info Content Styles */
-
-.infoContent {
-    width: 100%;
-    display: inline;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 20px;
-}
-
-
-.infoContent a{
+.card h3 {
     color: #fff;
-    position: relative;
+    margin: 20px;
+    font-size: 1.5em;
 }
 
-.infoContent a:hover, span:hover {
-    color: #4169E1;
+.card p {
+    margin: 0 20px 20px;
+    color: #fff;
 }
 
+.link {
+    display: block;
+    margin: 0 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
