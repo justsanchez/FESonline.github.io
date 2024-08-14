@@ -1,0 +1,23 @@
+h2 {
+    margin-left: 25%;
+}
+
+p {
+    font-size: 16px;
+    margin: 0px 27% 20px;
+    line-height: 24px;
+}
+
+.resumeList {
+    margin: 0px 27% 20px;
+    line-height: 20px;
+}
+
+.resumeList a {
+    color: #fff;
+}
+
+.resumeList a:hover {
+    color: #4169E1;
+}
+
