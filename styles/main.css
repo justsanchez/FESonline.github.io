@@ -846,6 +846,15 @@ footer{
   nav a{
   padding-right: 260px;
 }
+.link-container:hover .tooltipMicrosoftTeams  {
+  visibility: visible;
+  opacity: 0;
+}
+
+.link-container:hover .tooltipGroupMe  {
+  visibility: visible;
+  opacity: 0;
+}
 
 }
 
