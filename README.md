@@ -2,6 +2,7 @@
 - Alvaro Sanchez (Lead Web Developer)
 - Diego Ruiz Valencia (Web Developer)
 - Jovani Rivera-Hernandez (Web Developer Apprentice)
+- Javi Morales (Help fill in words in the home page)
 # Downloads
 
 ### HTML/CSS/JS
