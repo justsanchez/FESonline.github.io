@@ -162,6 +162,8 @@ document.addEventListener("click", function (event) {
   }
 });
 
+
+
 // leave last, its prone to mess up some code
 
 //scroll reveal
