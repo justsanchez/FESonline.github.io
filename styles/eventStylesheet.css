@@ -123,6 +123,11 @@
     font-size: 18px;
 }
 
+.herobanner{
+    width: 100%;
+
+}
+
   
   /*possible solution when restricting scrolling*/
   /*restrict based on how long the modal is (if that possible)*/
