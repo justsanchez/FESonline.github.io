@@ -104,6 +104,8 @@
   
 
   .eventBox2 {
+    background: solid red;
+    width: 400px;
     border-radius: 8px;
     padding: 20px;
     margin: 20px 0;
