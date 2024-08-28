@@ -1,3 +1,5 @@
+/* General Styles */ 
+
 h2 {
     margin-left: 25%;
 }
@@ -8,10 +10,37 @@ p {
     line-height: 24px;
 }
 
-.resumeList {
-    margin: 0px 27% 20px;
-    line-height: 20px;
+.helpfulLinks {
+    color: #4169E1;
+    text-align: center;
+    }
+
+.helpfulLinks:hover {
+    color: #fff;
 }
+
+.resumeList, .interviewTips {
+    margin: 0px 25% 20px;
+    line-height: 25px;
+}
+
+.resumeList ul, .interviewTips ul {
+    list-style-type: none
+  }
+
+.resumeList li, .interviewTips li {
+    display: grid;
+    grid-template-columns: 20px auto;
+    justify-content: start;
+    align-items: center;
+}
+
+.resumeList li::before, .interviewTips li::before {
+    content: " > ";
+    font-size: 15px;
+    color: #4169E1;
+}
+
 
 .resumeList a {
     color: #fff;
@@ -19,5 +48,7 @@ p {
 
 .resumeList a:hover {
     color: #4169E1;
+    
 }
+
 
