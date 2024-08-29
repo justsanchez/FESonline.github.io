@@ -61,8 +61,17 @@ window.addEventListener("load", () => {
 // Select all elements with class 'eventBox'
 const eventBoxes = document.querySelectorAll(".eventBox");
 
+
+// checking if all events passed
+
+allEventsCounter = 0;
+eventsPassedCounter = 0;
+
+
+
 // Iterate through each eventBox
 eventBoxes.forEach((eventBox) => {
+  allEventsCounter++;
   const dateOfEvent = eventBox.querySelector(".date");
   const dateString = dateOfEvent.textContent.trim();
 
@@ -75,18 +84,45 @@ eventBoxes.forEach((eventBox) => {
   const month = String(todaysDate.getMonth() + 1).padStart(2, "0"); // Month is zero-indexed, so we add 1
   const day = String(todaysDate.getDate()).padStart(2, "0");
 
-  const formattedDate = `${year}-${month}-${day}`;
+  const todaysFormattedDate = `${year}-${month}-${day}`;
 
 
-
-  if (dateString > formattedDate) {
-  } else if (dateString < formattedDate) {
+  if (dateString > todaysFormattedDate) {
+    
+  } else if (dateString < todaysFormattedDate) {
     const eventBoxContainer = document.getElementById(eventId);
+    eventsPassedCounter++;
     eventBoxContainer.style.display="none";
   } else {
 
   }
+
+  
+
+
+
+ 
+
+
+
 });
+
+
+// 
+if (allEventsCounter == eventsPassedCounter){
+  // all events have passed, show a p message
+  const message = document.createElement("p");
+  message.textContent = "All events have passed";
+  // message.style.fontSize = "24px";
+  // message.style.fontWeight = "bold";
+  message.style.padding = "200px";
+  message.style.margin = "0 auto";
+  // append it to the container class
+  const container = document.querySelector(".container");
+  container.appendChild(message);
+
+}
+
 
 //popup window attempt three
 // Get all modal links
@@ -161,6 +197,10 @@ document.addEventListener("click", function (event) {
     }
   }
 });
+
+// add a function that counts how many elements have the date class
+
+
 
 
 
