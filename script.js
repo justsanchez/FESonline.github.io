@@ -109,13 +109,11 @@ eventBoxes.forEach((eventBox) => {
 
 
 });
-
-
 eventPage = document.querySelector(".eventPage");
 
 
 // checking if we were on the event page
-if (eventPage) {
+if (eventPage!=null) {
   eventPageBool = eventPage.textContent.trim();
 }
 
@@ -132,10 +130,12 @@ if (allEventsCounter == eventsPassedCounter){
   const container = document.querySelector(".container");
 
   
-
-  if (eventPageBool){
-  container.appendChild(message);
+  // just make seperate file for events in the future (jovani task)
+  if (eventPage!=null){
+  if (eventPageBool=true){
+    container.appendChild(message);
   }
+}
 
 }
 
