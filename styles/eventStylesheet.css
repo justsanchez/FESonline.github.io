@@ -129,16 +129,10 @@
 }
 
   
-  /*possible solution when restricting scrolling*/
-  /*restrict based on how long the modal is (if that possible)*/
-  @media screen and (max-width: 886px) {
-  
-  
-  
-  }
+ 
   
   /*iphone media query*/
-  @media screen and (max-width: 798px) {
+  @media screen and (max-width: 960px) {
       .eventBox {
       grid-template-columns: 1fr;
       top: -1px;

@@ -110,11 +110,8 @@ eventBoxes.forEach((eventBox) => {
 
 // 
 if (allEventsCounter == eventsPassedCounter){
-  // all events have passed, show a p message
   const message = document.createElement("p");
   message.textContent = "All events have passed";
-  // message.style.fontSize = "24px";
-  // message.style.fontWeight = "bold";
   message.style.padding = "200px";
   message.style.margin = "0 auto";
   // append it to the container class
