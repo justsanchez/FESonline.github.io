@@ -134,7 +134,7 @@ if (allEventsCounter == eventsPassedCounter){
   
 
   if (eventPageBool){
-  container.appendChild(message);
+  // container.appendChild(message);
   }
 
 }
