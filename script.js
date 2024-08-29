@@ -63,7 +63,7 @@ const eventBoxes = document.querySelectorAll(".eventBox");
 
 
 // checking if all events passed
-console.log("here");
+
 allEventsCounter = 0;
 eventsPassedCounter = 0;
 eventsPage = false;
@@ -116,7 +116,6 @@ eventPage = document.querySelector(".eventPage");
 
 // checking if we were on the event page
 if (eventPage) {
-  console.log("hereddddd")
   eventPageBool = eventPage.textContent.trim();
 }
 
