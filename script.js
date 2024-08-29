@@ -66,6 +66,8 @@ const eventBoxes = document.querySelectorAll(".eventBox");
 
 allEventsCounter = 0;
 eventsPassedCounter = 0;
+eventsPage = false;
+
 
 
 
@@ -74,6 +76,7 @@ eventBoxes.forEach((eventBox) => {
   allEventsCounter++;
   const dateOfEvent = eventBox.querySelector(".date");
   const dateString = dateOfEvent.textContent.trim();
+
 
   // Get the ID of the eventBox
   const eventId = eventBox.id;
@@ -108,6 +111,17 @@ eventBoxes.forEach((eventBox) => {
 });
 
 
+eventPage = document.querySelector(".eventPage");
+
+
+// checking if we were on the event page
+if (eventPage) {
+  eventPageBool = eventPage.textContent.trim();
+}
+
+
+
+
 // 
 if (allEventsCounter == eventsPassedCounter){
   const message = document.createElement("p");
@@ -116,7 +130,12 @@ if (allEventsCounter == eventsPassedCounter){
   message.style.margin = "0 auto";
   // append it to the container class
   const container = document.querySelector(".container");
+
+  
+
+  if (eventPageBool){
   container.appendChild(message);
+  }
 
 }
 
