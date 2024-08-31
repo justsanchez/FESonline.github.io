@@ -841,6 +841,7 @@ footer{
     /* This should make it appear in mobile */
     position: absolute;
     top: 0;
+    
     left: 65%;
   }
   nav a{
