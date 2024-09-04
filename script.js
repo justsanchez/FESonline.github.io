@@ -4,6 +4,52 @@ window.addEventListener("load", () => {
   loadingOverlay.style.display = "none";
 });
 
+// set up local storage
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('toggle-button');
+    const greeting = document.getElementById('greeting');
+
+    // Check saved state in localStorage
+    const savedState = localStorage.getItem('switchState');
+    if (savedState === 'ecu') {
+        setButtonState('ecu');
+    } else {
+        setButtonState('uncw');
+    }
+
+    // Add event listener to toggle the button state
+    button.addEventListener('click', () => {
+        if (button.innerText === 'uncw') {
+            setButtonState('ecu');
+        } else {
+            setButtonState('uncw');
+        }
+    });
+
+
+    function setButtonState(state) {
+        if (state === 'ecu') {
+            button.innerText = 'ecu';
+            button.style.left = '50px'; // Move button to the right
+            greeting.textContent = 'Hello ECU student!';
+            localStorage.setItem('switchState', 'ecu');
+            console.log('switchState saved in localStorage'+localStorage.getItem('switchState'))
+        } else {
+            button.innerText = 'uncw';
+            button.style.left = '10px'; // Move button to the left
+            greeting.textContent = 'Hello UNCW student!';
+            localStorage.setItem('switchState', 'uncw');
+            console.log('switchState saved in localStorage'+localStorage.getItem('switchState'))
+        }
+    }
+});
+
+
+  
+
+
+
 //
 // //pop up window
 // const openModalButtons= document.querySelectorAll('[data-modal-target]');
