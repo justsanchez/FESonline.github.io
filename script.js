@@ -34,13 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.left = '50px'; // Move button to the right
             greeting.textContent = 'Hello ECU student!';
             localStorage.setItem('switchState', 'ecu');
-            console.log('switchState saved in localStorage'+localStorage.getItem('switchState'))
+            console.log('switchState saved in localStorage: '+localStorage.getItem('switchState'))
         } else {
             button.innerText = 'uncw';
             button.style.left = '10px'; // Move button to the left
             greeting.textContent = 'Hello UNCW student!';
             localStorage.setItem('switchState', 'uncw');
-            console.log('switchState saved in localStorage'+localStorage.getItem('switchState'))
+            console.log('switchState saved in localStorage: '+localStorage.getItem('switchState'))
         }
     }
 });
