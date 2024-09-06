@@ -51,4 +51,76 @@ p {
     
 }
 
+@media screen and (max-width: 1160px) {
 
+    .topicHeader{
+        margin: 40px 18% 20px;
+    }
+
+    .resumeList, .interviewTips {
+        margin: 0px 15% 15px;
+    }
+
+    .infoParagraph {
+        margin: 0px 19% 20px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .topicHeader{
+        margin: 40px 14% 20px;
+    }
+
+    .resumeList, .interviewTips {
+        margin: 0px 17% 20px;
+    }
+
+    .infoParagraph {
+        margin: 0px 16% 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .topicHeader{
+        margin: 40px 3% 25px;
+    }
+
+    .resumeList, .interviewTips {
+        margin: 20px 10px;
+    }
+
+    .infoParagraph {
+        margin: 10px 5% 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .topicHeader{
+        margin: 40px 3% 25px;
+    }
+
+    .resumeList, .interviewTips {
+        margin: 20px 10px;
+    }
+
+    .infoParagraph {
+        margin: 10px 5% 25px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 200%;
+    }
+
+}
