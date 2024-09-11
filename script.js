@@ -7,42 +7,58 @@ window.addEventListener("load", () => {
 // set up local storage
 
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('toggle-button');
-    const greeting = document.getElementById('greeting');
+  const button = document.getElementById('toggle-button');
+  const onOffSwitch = document.querySelector('.onoffswitch');
+  const greeting = document.getElementById('greeting');
 
-    // Check saved state in localStorage
-    const savedState = localStorage.getItem('switchState');
-    if (savedState === 'ecu') {
-        setButtonState('ecu');
-    } else {
-        setButtonState('uncw');
-    }
+  let lastScrollTop = 0; // Store the last scroll position
 
-    // Add event listener to toggle the button state
-    button.addEventListener('click', () => {
-        if (button.innerText === 'uncw') {
-            setButtonState('ecu');
-        } else {
-            setButtonState('uncw');
-        }
-    });
+  // Check saved state in localStorage
+  const savedState = localStorage.getItem('switchState');
+  if (savedState === 'ecu') {
+      setButtonState('ecu');
+  } else {
+      setButtonState('uncw');
+  }
 
+  // Add event listener to toggle the button state
+  button.addEventListener('click', () => {
+      if (button.innerText === 'uncw') {
+          setButtonState('ecu');
+      } else {
+          setButtonState('uncw');
+      }
+  });
 
-    function setButtonState(state) {
-        if (state === 'ecu') {
-            button.innerText = 'ecu';
-            button.style.left = '50px'; // Move button to the right
-            greeting.textContent = 'Hello ECU student!';
-            localStorage.setItem('switchState', 'ecu');
-            console.log('switchState saved in localStorage: '+localStorage.getItem('switchState'))
-        } else {
-            button.innerText = 'uncw';
-            button.style.left = '10px'; // Move button to the left
-            greeting.textContent = 'Hello UNCW student!';
-            localStorage.setItem('switchState', 'uncw');
-            console.log('switchState saved in localStorage: '+localStorage.getItem('switchState'))
-        }
-    }
+  // Function to set button state and update the greeting
+  function setButtonState(state) {
+      if (state === 'ecu') {
+          button.innerText = 'ecu';
+          button.style.left = '39px'; // Move button to the right
+          greeting.textContent = 'Hello ECU student!';
+          localStorage.setItem('switchState', 'ecu');
+      } else {
+          button.innerText = 'uncw';
+          button.style.left = '5px'; // Move button to the left
+          greeting.textContent = 'Hello UNCW student!';
+          localStorage.setItem('switchState', 'uncw');
+      }
+  }
+
+  // Scroll event to show/hide the button on scroll
+  window.addEventListener('scroll', () => {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScrollTop > lastScrollTop) {
+          // Scrolling down, hide the button
+          onOffSwitch.classList.add('hide');
+      } else {
+          // Scrolling up, show the button
+          onOffSwitch.classList.remove('hide');
+      }
+
+      lastScrollTop = currentScrollTop;
+  });
 });
 
 
