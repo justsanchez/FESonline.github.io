@@ -18,8 +18,8 @@ html{
 .onoffswitch {
 
   position: fixed;
-  top: 60px;
-  right: 15px;
+  top: 75px;
+  right: 13px;
   width: 70px; /* Reduced width */
   height: 35px; /* Reduced height */
   background-color: #f0f0f0;

@@ -6,65 +6,61 @@ window.addEventListener("load", () => {
 
 // set up local storage
 
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('toggle-button');
-  const onOffSwitch = document.querySelector('.onoffswitch');
-  const greeting = document.getElementById('greeting');
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("toggle-button");
+  const onOffSwitch = document.querySelector(".onoffswitch");
+  const greeting = document.getElementById("greeting");
 
   let lastScrollTop = 0; // Store the last scroll position
 
   // Check saved state in localStorage
-  const savedState = localStorage.getItem('switchState');
-  if (savedState === 'ecu') {
-      setButtonState('ecu');
+  const savedState = localStorage.getItem("switchState");
+  if (savedState === "ecu") {
+    setButtonState("ecu");
   } else {
-      setButtonState('uncw');
+    setButtonState("uncw");
   }
 
   // Add event listener to toggle the button state
-  button.addEventListener('click', () => {
-      if (button.innerText === 'uncw') {
-          setButtonState('ecu');
-      } else {
-          setButtonState('uncw');
-      }
+  button.addEventListener("click", () => {
+    if (button.innerText === "uncw") {
+      setButtonState("ecu");
+    } else {
+      setButtonState("uncw");
+    }
   });
 
   // Function to set button state and update the greeting
   function setButtonState(state) {
-      if (state === 'ecu') {
-          button.innerText = 'ecu';
-          button.style.left = '39px'; // Move button to the right
-          greeting.textContent = 'Hello ECU student!';
-          localStorage.setItem('switchState', 'ecu');
-      } else {
-          button.innerText = 'uncw';
-          button.style.left = '5px'; // Move button to the left
-          greeting.textContent = 'Hello UNCW student!';
-          localStorage.setItem('switchState', 'uncw');
-      }
+    if (state === "ecu") {
+      button.innerText = "ecu";
+      button.style.left = "39px"; // Move button to the right
+      greeting.textContent = "Hello ECU student!";
+      localStorage.setItem("switchState", "ecu");
+    } else {
+      button.innerText = "uncw";
+      button.style.left = "5px"; // Move button to the left
+      greeting.textContent = "Hello UNCW student!";
+      localStorage.setItem("switchState", "uncw");
+    }
   }
 
   // Scroll event to show/hide the button on scroll
-  window.addEventListener('scroll', () => {
-      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  window.addEventListener("scroll", () => {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollTop > lastScrollTop) {
-          // Scrolling down, hide the button
-          onOffSwitch.classList.add('hide');
-      } else {
-          // Scrolling up, show the button
-          onOffSwitch.classList.remove('hide');
-      }
+    if (currentScrollTop > lastScrollTop) {
+      // Scrolling down, hide the button
+      onOffSwitch.classList.add("hide");
+    } else {
+      // Scrolling up, show the button
+      onOffSwitch.classList.remove("hide");
+    }
 
-      lastScrollTop = currentScrollTop;
+    lastScrollTop = currentScrollTop;
   });
 });
-
-
-  
-
-
 
 //
 // //pop up window
@@ -123,15 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Select all elements with class 'eventBox'
 const eventBoxes = document.querySelectorAll(".eventBox");
 
-
 // checking if all events passed
 
 allEventsCounter = 0;
 eventsPassedCounter = 0;
 eventsPage = false;
-
-
-
 
 // Iterate through each eventBox
 eventBoxes.forEach((eventBox) => {
@@ -139,10 +131,8 @@ eventBoxes.forEach((eventBox) => {
   const dateOfEvent = eventBox.querySelector(".date");
   const dateString = dateOfEvent.textContent.trim();
 
-
   // Get the ID of the eventBox
   const eventId = eventBox.id;
-
 
   const todaysDate = new Date();
   const year = todaysDate.getFullYear();
@@ -151,39 +141,23 @@ eventBoxes.forEach((eventBox) => {
 
   const todaysFormattedDate = `${year}-${month}-${day}`;
 
-
   if (dateString > todaysFormattedDate) {
-    
   } else if (dateString < todaysFormattedDate) {
     const eventBoxContainer = document.getElementById(eventId);
     eventsPassedCounter++;
-    eventBoxContainer.style.display="none";
+    eventBoxContainer.style.display = "none";
   } else {
-
   }
-
-  
-
-
-
- 
-
-
-
 });
 eventPage = document.querySelector(".eventPage");
 
-
 // checking if we were on the event page
-if (eventPage!=null) {
+if (eventPage != null) {
   eventPageBool = eventPage.textContent.trim();
 }
 
-
-
-
-// 
-if (allEventsCounter == eventsPassedCounter){
+//
+if (allEventsCounter == eventsPassedCounter) {
   const message = document.createElement("p");
   message.textContent = "All events have passed";
   message.style.padding = "200px";
@@ -191,22 +165,18 @@ if (allEventsCounter == eventsPassedCounter){
   // append it to the container class
   const container = document.querySelector(".container");
 
-  
   // just make seperate file for events in the future (jovani task)
-  if (eventPage!=null){
-  if (eventPageBool=true){
-    container.appendChild(message);
+  if (eventPage != null) {
+    if ((eventPageBool = true)) {
+      container.appendChild(message);
+    }
   }
 }
-
-}
-
 
 //popup window attempt three
 // Get all modal links
 // Get all modal links
 const modalLinks = document.querySelectorAll(".button");
-
 
 // Add click event listeners to modal links
 modalLinks.forEach((link) => {
@@ -240,23 +210,22 @@ modalLinks.forEach((link) => {
   });
 });
 
-
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
-let counter = 0
-navToggleCheckbox.checked=false;
+let counter = 0;
+navToggleCheckbox.checked = false;
 
 // Add event listener for clicks anywhere on the document
 // handles when the menu is not being closed when clicked twice
 document.addEventListener("click", function (event) {
   if (event.target === navToggleCheckbox) {
     counter++;
-    if (counter > 1 ) {
-      counter=0; // reseting the counter :|
-      navToggleCheckbox.checked=false;
+    if (counter > 1) {
+      counter = 0; // reseting the counter :|
+      navToggleCheckbox.checked = false;
+    }
   }
-}
-})
+});
 
 // Add event listener for clicks anywhere on the document
 document.addEventListener("click", function (event) {
@@ -265,11 +234,10 @@ document.addEventListener("click", function (event) {
     // Check if the clicked element is not within the body element (to handle potential modals/overlays)
     if (!event.target.isSameNode(bodyElement)) {
       // Uncheck the checkbox if it's checked
-      if (!(navToggleCheckbox.checked)) {
+      if (!navToggleCheckbox.checked) {
         navToggleCheckbox.checked = false;
         counter = 0;
-      }
-      else{
+      } else {
         navToggleCheckbox.checked = false;
       }
     }
@@ -277,10 +245,6 @@ document.addEventListener("click", function (event) {
 });
 
 // add a function that counts how many elements have the date class
-
-
-
-
 
 // leave last, its prone to mess up some code
 
