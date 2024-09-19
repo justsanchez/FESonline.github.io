@@ -13,32 +13,30 @@ p {
 .helpfulLinks {
     color: #4169E1;
     text-align: center;
-    }
+}
 
 .helpfulLinks:hover {
     color: #fff;
 }
 
-.resumeList, .interviewTips {
+.tipList {
     margin: 0px 25% 20px;
     line-height: 25px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.resumeList ul, .interviewTips ul {
-    list-style-type: none
-  }
-
-.resumeList li, .interviewTips li {
-    display: grid;
-    grid-template-columns: 20px auto;
-    justify-content: start;
-    align-items: center;
+.tipList li {
+    display: flex;
+    align-items: flex-start;
 }
 
-.resumeList li::before, .interviewTips li::before {
+.tipList li::before {
     content: " > ";
     font-size: 15px;
     color: #4169E1;
+    margin-right: 10px;
+    line-height: 25px;
 }
 
 
