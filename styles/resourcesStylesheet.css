@@ -49,7 +49,7 @@ h2 {
     flex-direction: column;
     width: 100%;
     margin-bottom: 30px;
-    border: 1px solid red;
+    
 }
 
 .card:hover {
@@ -76,12 +76,13 @@ h2 {
 }
 
 .cardContent h3 {
-    margin: 20px;
+    /* whatever you adjust here, adjust to the p element */
+    /* margin: 3%; */
     font-size: 24px;
 }
 
 .cardContent p {
-    margin-left: 7%;
+    /* margin-left: 7%; */
 }
 
 
