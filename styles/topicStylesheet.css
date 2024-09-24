@@ -10,6 +10,10 @@ p {
     line-height: 24px;
 }
 
+.linkContainer {
+    text-align: center;
+}
+
 .helpfulLinks {
     color: #4169E1;
     text-align: center;
@@ -46,8 +50,23 @@ p {
 
 .resumeList a:hover {
     color: #4169E1;
-    
 }
+
+.logos {
+    margin: 0 auto;
+}
+
+.smooth-hover {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 50px;
+    max-width: 274px; /* Ensures the image does not exceed its container's width */
+    height: auto; 
+}
+
 
 @media screen and (max-width: 1160px) {
 
@@ -55,7 +74,7 @@ p {
         margin: 40px 18% 20px;
     }
 
-    .resumeList, .interviewTips {
+    .tipList {
         margin: 0px 15% 15px;
     }
 
@@ -71,7 +90,7 @@ p {
         margin: 40px 14% 20px;
     }
 
-    .resumeList, .interviewTips {
+    .tipList {
         margin: 0px 17% 20px;
     }
 
@@ -88,7 +107,7 @@ p {
         margin: 40px 3% 25px;
     }
 
-    .resumeList, .interviewTips {
+    .tipList {
         margin: 20px 10px;
     }
 
@@ -105,7 +124,7 @@ p {
         margin: 40px 3% 25px;
     }
 
-    .resumeList, .interviewTips {
+    .tipList {
         margin: 20px 10px;
     }
 
