@@ -2,8 +2,18 @@
 - Alvaro Sanchez (Lead Web Developer)
 - Diego Ruiz Valencia (Web Developer)
 - Jovani Rivera-Hernandez (Web Developer Apprentice)
+- _add name here_
 - Javi Morales (Helped fill in words in the home page)
 # Downloads
+
+# Getting started from scratch
+* Download Git (Might need homebrew first if on mac): https://git-scm.com/downloads
+* Make sure Git has properly downloaded:
+```git -v```
+#### Download VS Code
+- https://code.visualstudio.com/download (**My Preference**)
+- Set Up Git with VS Code
+- Clone the repo: https://github.com/justsanchez/FESonline.github.io
 
 ### HTML/CSS/JS
 
@@ -56,14 +66,7 @@ Documentation:
 [JavaScript Documentation by DevDocs](https://devdocs.io/javascript/)
 
 
-# Getting started from scratch
-* Download Git (Might need homebrew first if on mac): https://git-scm.com/downloads
-* Make sure Git has properly downloaded:
-```git -v```
-#### Download VS Code
-- https://code.visualstudio.com/download (**My Preference**)
-- Set Up Git with VS Code
-- Clone the repo: https://github.com/justsanchez/FESonline.github.io
+
 
 
 
