@@ -4,7 +4,7 @@
 - Jovani Rivera-Hernandez (Web Developer Apprentice)
 - _add name here_
 - Javi Morales (Helped fill in words in the home page)
-# Downloads
+
 
 # Getting started from scratch
 * Download Git (Might need homebrew first if on mac): https://git-scm.com/downloads
