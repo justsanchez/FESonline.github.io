@@ -2,7 +2,7 @@
 - Alvaro Sanchez (Lead Web Developer)
 - Diego Ruiz Valencia (Web Developer)
 - Jovani Rivera-Hernandez (Web Developer Apprentice)
-- _add name here_
+- Cristian Gil Leon (Web Developer Apprentice)
 - Javi Morales (Helped fill in words in the home page)
 
 
