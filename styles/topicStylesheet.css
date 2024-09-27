@@ -1,0 +1,143 @@
+/* General Styles */ 
+
+h2 {
+    margin-left: 25%;
+}
+
+p {
+    font-size: 16px;
+    margin: 0px 27% 20px;
+    line-height: 24px;
+}
+
+.linkContainer {
+    text-align: center;
+}
+
+.helpfulLinks {
+    color: #4169E1;
+    text-align: center;
+}
+
+.helpfulLinks:hover {
+    color: #fff;
+}
+
+.tipList {
+    margin: 0px 25% 20px;
+    line-height: 25px;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tipList li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tipList li::before {
+    content: " > ";
+    font-size: 15px;
+    color: #4169E1;
+    margin-right: 10px;
+    line-height: 25px;
+}
+
+
+.resumeList a {
+    color: #fff;
+}
+
+.resumeList a:hover {
+    color: #4169E1;
+}
+
+.logos {
+    margin: 0 auto;
+}
+
+.smooth-hover {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 50px;
+    max-width: 274px; /* Ensures the image does not exceed its container's width */
+    height: auto; 
+}
+
+
+@media screen and (max-width: 1160px) {
+
+    .topicHeader{
+        margin: 40px 18% 20px;
+    }
+
+    .tipList {
+        margin: 0px 15% 15px;
+    }
+
+    .infoParagraph {
+        margin: 0px 19% 20px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .topicHeader{
+        margin: 40px 14% 20px;
+    }
+
+    .tipList {
+        margin: 0px 17% 20px;
+    }
+
+    .infoParagraph {
+        margin: 0px 16% 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .topicHeader{
+        margin: 40px 3% 25px;
+    }
+
+    .tipList {
+        margin: 20px 10px;
+    }
+
+    .infoParagraph {
+        margin: 10px 5% 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .topicHeader{
+        margin: 40px 3% 25px;
+    }
+
+    .tipList {
+        margin: 20px 10px;
+    }
+
+    .infoParagraph {
+        margin: 10px 5% 25px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 200%;
+    }
+
+}
