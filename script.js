@@ -28,6 +28,21 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       setButtonState("uncw");
     }
+
+    const switchNavigatorContent = document.querySelector('.onoffswitch .switchNavigator');
+
+    // Check if the element is found and not null
+    if (switchNavigatorContent) {
+      // Retrieve the text content
+      const content = switchNavigatorContent.textContent;
+      // nagivate to content
+  
+  
+      setTimeout(() => {
+        window.location.href = content;
+        }, 200);
+      
+    }
   });
 
   // Function to set button state and update the greeting
