@@ -2,79 +2,41 @@
 window.addEventListener("load", () => {
   const loadingOverlay = document.getElementById("loading-overlay");
   loadingOverlay.style.display = "none";
+  // always load in as true
+  checkbox.checked=true;
+
 });
 
-// set up local storage
-
 document.addEventListener("DOMContentLoaded", () => {
-  // Select the <p> tag with class 'switchNavigator' inside the '.onoffswitch' div
+  const checkbox = document.getElementById("checkbox");
+  const slider = document.querySelector(".slider");
+  const switchNavigation = document.querySelector(".switchNavigation");
 
-  const button = document.getElementById("toggle-button");
-  const onOffSwitch = document.querySelector(".onoffswitch");
-  const greeting = document.getElementById("greeting");
-
-  let lastScrollTop = 0; // Store the last scroll position
-
-  // Check saved state in localStorage
-  const savedState = localStorage.getItem("switchState");
-  if (savedState === "ecu") {
-    setButtonState("ecu");
-  } else {
-    setButtonState("uncw");
+  // Check if the checkbox is checked initially and apply styles
+  if (checkbox.checked) {
+    slider.style.backgroundColor = "#5C5DAF"; // Set to checked color (e.g., green)
+    slider.style.setProperty("--slider-transform", "translateX(26px)"); // Move the slider thumb to the right
   }
 
-  // Add event listener to toggle the button state
-  button.addEventListener("click", () => {
-    if (button.innerText === "uncw") {
-      setButtonState("ecu");
+  // Toggle styles when the checkbox changes
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      // slider.style.backgroundColor = "black"; // ! 
+      slider.style.setProperty("--slider-transform", "translateX(26px)");
+      
     } else {
-      setButtonState("uncw");
+      slider.style.backgroundColor = "#007A8A";
+      slider.style.setProperty("--slider-transform", "translateX(0)");
+      const navText = switchNavigation.textContent;
+      console.log(`Navigating to: ${navText}`);
+      // navigate to navText
+
+      // have a .3 sec delay
+      setTimeout(() => {
+        // navigate to navText
+        window.location.href = navText;
+        }, 300);
     }
-    const switchNavigatorContent = document.querySelector('.onoffswitch .switchNavigator');
-
-  // Check if the element is found and not null
-  if (switchNavigatorContent) {
-    // Retrieve the text content
-    const content = switchNavigatorContent.textContent;
-    // nagivate to content
-
-
-    setTimeout(() => {
-      window.location.href = content;
-      }, 200);
-    
-  }
-  });
-
-  // Function to set button state and update the greeting
-  function setButtonState(state) {
-    if (state === "ecu") {
-      button.innerText = "ecu";
-      button.style.left = "39px"; // Move button to the right
-      greeting.textContent = "Hello ECU student!";
-      localStorage.setItem("switchState", "ecu");
-    } else {
-      button.innerText = "uncw";
-      button.style.left = "5px"; // Move button to the left
-      greeting.textContent = "Hello UNCW student!";
-      localStorage.setItem("switchState", "uncw");
-    }
-  }
-
-  // Scroll event to show/hide the button on scroll
-  window.addEventListener("scroll", () => {
-    const currentScrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScrollTop > lastScrollTop) {
-      // Scrolling down, hide the button
-      onOffSwitch.classList.add("hide");
-    } else {
-      // Scrolling up, show the button
-      onOffSwitch.classList.remove("hide");
-    }
-
-    lastScrollTop = currentScrollTop;
   });
 });
 

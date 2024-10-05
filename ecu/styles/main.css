@@ -15,37 +15,62 @@ html{
     /*height: 100vh;*/
 }
 
-.onoffswitch {
-
-  position: fixed;
-  top: 75px;
-  right: 13px;
-  width: 70px; /* Reduced width */
-  height: 35px; /* Reduced height */
-  background-color: #f0f0f0;
-  border-radius: 20px; /* Adjusted for new size */
-  overflow: hidden;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-
-  /* Add box shadow red */
-
-
-
+.switch {
+  display: inline-block;
+  height: 36px;
+  width: 65px;
+  
+  /* Positioning the switch at the top right corner */
+  position: fixed; /* Stays in the same position even when scrolling */
+  top: 70px;       /* Distance from the top of the page */
+  right: 12px;     /* Distance from the right side of the page */
+  z-index: 1000;   /* Ensures it stays above other content */
 }
 
-.floating-button {
-  position: absolute;
-  top: 50%;
-  left: 1000px; /* Adjusted left position */
-  transform: translateY(-50%);
-  background-color: #841cd4;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 25px; /* Reduced width */
-  height: 25px; /* Reduced height */
+.switch input {
+  display: none; /* Hides the actual checkbox */
+}
+
+.slider {
+  background-color: #E4A300; /* Default background color when off */
+  bottom: 0;
   cursor: pointer;
-  transition: left 0.3s ease;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 0.4s; /* Smooth transition of background color */
+}
+
+.slider:before {
+  background-color: #E4A300; /* Inner circle color */
+  bottom: 4px;
+  content: "";
+  height: 29px;
+  left: 4px;
+  position: absolute;
+  width: 29px;
+  
+  /* Transition on the custom transform variable for movement */
+  transition: transform 0.4s ease;
+  
+  /* Default transform, can be overridden by JavaScript */
+  transform: var(--slider-transform, translateX(0));
+}
+
+.slider.checked:before {
+  background-color: #F6B93B; /* Inner circle color for ECU */
+}
+
+
+/* Rounded slider background */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* Rounded inner circle */
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* Hide when scrolling down */
