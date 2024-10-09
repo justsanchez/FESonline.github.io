@@ -2,8 +2,54 @@
 window.addEventListener("load", () => {
   const loadingOverlay = document.getElementById("loading-overlay");
   loadingOverlay.style.display = "none";
+  // always load in as false
+  checkbox.checked=false;
 });
 
+// set up local storage
+
+document.addEventListener("DOMContentLoaded", () => {
+  const checkbox = document.getElementById("checkbox");
+  const slider = document.querySelector(".slider");
+  const switchNavigation = document.querySelector(".switchNavigation");
+
+
+  checkbox.addEventListener("change", function() {
+    if (checkbox.checked) {
+      // If the checkbox is checked (ON state)
+      slider.style.backgroundColor = "#5C5DAF"; // Green background
+      slider.classList.add("checked"); // Change inner circle color
+      slider.style.setProperty("--slider-transform", "translateX(26px)");
+      
+      // Read the switchNavigation text when checked
+      const navText = switchNavigation.textContent;
+      console.log(`IF Navigating to: ${navText}`);
+      // navigate to navText
+
+      // have a .3 sec delay
+      setTimeout(() => {
+        // navigate to navText
+        window.location.href = navText;
+        }, 300);
+      // Perform navigation or any other action with navText
+    } else {
+      // If the checkbox is unchecked (OFF state)
+      slider.style.backgroundColor = "#ccc"; // Gray background
+      slider.classList.remove("checked"); // Revert inner circle color
+      slider.style.setProperty("--slider-transform", "translateX(0)");
+      
+      // Read the switchNavigation text when unchecked
+      const navText = switchNavigation.textContent;
+      console.log(`ELSE Navigating to: ${navText}`);
+
+      // TODO: it just turns grey, not part of the js
+      // ! Listen
+      // ? how
+      
+      // Perform navigation or any other action with navText
+    }
+  });
+});
 //
 // //pop up window
 // const openModalButtons= document.querySelectorAll('[data-modal-target]');
@@ -61,15 +107,11 @@ window.addEventListener("load", () => {
 // Select all elements with class 'eventBox'
 const eventBoxes = document.querySelectorAll(".eventBox");
 
-
 // checking if all events passed
 
 allEventsCounter = 0;
 eventsPassedCounter = 0;
 eventsPage = false;
-
-
-
 
 // Iterate through each eventBox
 eventBoxes.forEach((eventBox) => {
@@ -77,10 +119,8 @@ eventBoxes.forEach((eventBox) => {
   const dateOfEvent = eventBox.querySelector(".date");
   const dateString = dateOfEvent.textContent.trim();
 
-
   // Get the ID of the eventBox
   const eventId = eventBox.id;
-
 
   const todaysDate = new Date();
   const year = todaysDate.getFullYear();
@@ -89,39 +129,23 @@ eventBoxes.forEach((eventBox) => {
 
   const todaysFormattedDate = `${year}-${month}-${day}`;
 
-
   if (dateString > todaysFormattedDate) {
-    
   } else if (dateString < todaysFormattedDate) {
     const eventBoxContainer = document.getElementById(eventId);
     eventsPassedCounter++;
-    eventBoxContainer.style.display="none";
+    eventBoxContainer.style.display = "none";
   } else {
-
   }
-
-  
-
-
-
- 
-
-
-
 });
 eventPage = document.querySelector(".eventPage");
 
-
 // checking if we were on the event page
-if (eventPage!=null) {
+if (eventPage != null) {
   eventPageBool = eventPage.textContent.trim();
 }
 
-
-
-
-// 
-if (allEventsCounter == eventsPassedCounter){
+//
+if (allEventsCounter == eventsPassedCounter) {
   const message = document.createElement("p");
   message.textContent = "All events have passed";
   message.style.padding = "200px";
@@ -129,22 +153,18 @@ if (allEventsCounter == eventsPassedCounter){
   // append it to the container class
   const container = document.querySelector(".container");
 
-  
   // just make seperate file for events in the future (jovani task)
-  if (eventPage!=null){
-  if (eventPageBool=true){
-    container.appendChild(message);
+  if (eventPage != null) {
+    if ((eventPageBool = true)) {
+      container.appendChild(message);
+    }
   }
 }
-
-}
-
 
 //popup window attempt three
 // Get all modal links
 // Get all modal links
 const modalLinks = document.querySelectorAll(".button");
-
 
 // Add click event listeners to modal links
 modalLinks.forEach((link) => {
@@ -178,23 +198,22 @@ modalLinks.forEach((link) => {
   });
 });
 
-
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
-let counter = 0
-navToggleCheckbox.checked=false;
+let counter = 0;
+navToggleCheckbox.checked = false;
 
 // Add event listener for clicks anywhere on the document
 // handles when the menu is not being closed when clicked twice
 document.addEventListener("click", function (event) {
   if (event.target === navToggleCheckbox) {
     counter++;
-    if (counter > 1 ) {
-      counter=0; // reseting the counter :|
-      navToggleCheckbox.checked=false;
+    if (counter > 1) {
+      counter = 0; // reseting the counter :|
+      navToggleCheckbox.checked = false;
+    }
   }
-}
-})
+});
 
 // Add event listener for clicks anywhere on the document
 document.addEventListener("click", function (event) {
@@ -203,11 +222,10 @@ document.addEventListener("click", function (event) {
     // Check if the clicked element is not within the body element (to handle potential modals/overlays)
     if (!event.target.isSameNode(bodyElement)) {
       // Uncheck the checkbox if it's checked
-      if (!(navToggleCheckbox.checked)) {
+      if (!navToggleCheckbox.checked) {
         navToggleCheckbox.checked = false;
         counter = 0;
-      }
-      else{
+      } else {
         navToggleCheckbox.checked = false;
       }
     }
