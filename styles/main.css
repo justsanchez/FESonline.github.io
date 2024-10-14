@@ -639,6 +639,10 @@ margin: 0 auto;
     margin: 20px 0 0 0;
 }
 
+.fixedAWS {
+  margin: 20px 0 0 -45px; /* negative value from the left to align better */
+}
+
 
 
 
