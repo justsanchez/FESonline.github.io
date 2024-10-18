@@ -147,7 +147,7 @@ const modalLinks = document.querySelectorAll(".button");
 
 
 const headerTag = document.querySelector('header');
-console.log(headerTag);
+
 modalLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
