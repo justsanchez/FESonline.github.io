@@ -180,11 +180,30 @@ modalLinks.forEach((link) => {
       e.preventDefault();
       modal.style.display = "none";
       document.body.style.overflow = "auto"; // Restore scrolling
-      document.body.style.paddingRight = ""; // Reset padding
+      document.body.style.paddingRight = ""; 
+      headerTag.style.paddingRight= ""; 
     });
   });
 });
 
+
+// Function to close the modal
+function closeModal(modal) {
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.body.style.paddingRight = ""; 
+    headerTag.style.paddingRight= ""; 
+  };
+};
+
+// Keydown Event Listener
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const openModal = document.querySelector('.modaloverlay[style*="display: block"]'); // Find open modal
+    closeModal(openModal); // Close the found modal
+  };
+});
 
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
@@ -223,21 +242,6 @@ document.addEventListener("click", function (event) {
 
 // add a function that counts how many elements have the date class
 
-// Function to close the modal
-function closeModal(modal) {
-  if (modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-  };
-};
-
-// Keydown Event Listener
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    const openModal = document.querySelector('.modaloverlay[style*="display: block"]'); // Find open modal
-    closeModal(openModal); // Close the found modal
-  };
-});
 
 
 
