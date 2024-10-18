@@ -146,34 +146,37 @@ if (allEventsCounter == eventsPassedCounter){
 const modalLinks = document.querySelectorAll(".button");
 
 
-// Add click event listeners to modal links
+const headerTag = document.querySelector('header');
+console.log(headerTag);
 modalLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     const target = this.getAttribute("href").substring(1); // Remove the #
     const modal = document.getElementById(target);
 
-    // Display the modal (fade-in effect)
-    modal.style.display = "block";
-    //  to prevent scrolling
-    document.body.style.overflow = "hidden";
-
-    // Close modal when clicking outside of it
+    // Calculate scrollbar width and apply padding
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    headerTag.style.paddingRight= `${scrollbarWidth}px`;
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+    
+    modal.style.display = "block"; // Show modal
+    
     modal.addEventListener("click", function (e) {
       if (e.target === this) {
         this.style.display = "none";
-        // to enable scrolling
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = "auto"; // Restore scrolling
+        document.body.style.paddingRight = ""; // Reset padding
+        headerTag.style.paddingRight= ""; // Reset padding
       }
     });
 
-    // Close modal when clicking the close button
     const closeButton = modal.querySelector(".closemodal");
     closeButton.addEventListener("click", function (e) {
       e.preventDefault();
       modal.style.display = "none";
-      // to enable scrolling
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; // Restore scrolling
+      document.body.style.paddingRight = ""; // Reset padding
     });
   });
 });
