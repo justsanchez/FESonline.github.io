@@ -154,9 +154,11 @@ modalLinks.forEach((link) => {
     const target = this.getAttribute("href").substring(1); // Remove the #
     const modal = document.getElementById(target);
 
-    // Calculate scrollbar width and apply padding
+    // calculate the width of the scrollbar by subtracting the client width from the inner width
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    // add padding to the body equal to the scrollbar width to prevent layout shift when scroll is disabled
     document.body.style.paddingRight = `${scrollbarWidth}px`;
+    // also apply the same padding to the header to keep it aligned with the rest of the page, as it'll shift if left alone 
     headerTag.style.paddingRight= `${scrollbarWidth}px`;
     document.body.style.overflow = "hidden"; // Prevent scrolling
     
@@ -166,8 +168,10 @@ modalLinks.forEach((link) => {
       if (e.target === this) {
         this.style.display = "none";
         document.body.style.overflow = "auto"; // Restore scrolling
-        document.body.style.paddingRight = ""; // Reset padding
-        headerTag.style.paddingRight= ""; // Reset padding
+        
+        // reset padding
+        document.body.style.paddingRight = ""; 
+        headerTag.style.paddingRight= ""; 
       }
     });
 
