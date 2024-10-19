@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 });
 
 //
-// //pop up window
+// pop up window
 // const openModalButtons= document.querySelectorAll('[data-modal-target]');
 // const closeModalButtons= document.querySelectorAll('[data-close-button]');
 // const overlay= document.getElementById('overlay');
@@ -69,14 +69,25 @@ eventsPassedCounter = 0;
 eventsPage = false;
 
 
-
+// Helper function to format components with leading zeros
+function formatToTwoDigits(number) {
+  return number.toString().padStart(2, '0');
+}
 
 // Iterate through each eventBox
 eventBoxes.forEach((eventBox) => {
   allEventsCounter++;
   const dateOfEvent = eventBox.querySelector(".date");
-  const dateString = dateOfEvent.textContent.trim();
+  let dateString = dateOfEvent.textContent.trim();
 
+
+  // Assuming dateString is given in the format 'YYYY-M-D' or similar
+  // Use regex to capture the components and reformat them as 'YYYY-MM-DD'
+
+  // this is in case the developer forgets to add a leading zero in the 'YYYY-M-D' format. ex. 2024-9-2 ->  2024-09-02
+  dateString = dateString.replace(/\b(\d{4})-(\d{1,2})-(\d{1,2})\b/, (_, year, month, day) => {
+    return `${year}-${formatToTwoDigits(month)}-${formatToTwoDigits(day)}`;
+  });
 
   // Get the ID of the eventBox
   const eventId = eventBox.id;
@@ -87,12 +98,17 @@ eventBoxes.forEach((eventBox) => {
   const month = String(todaysDate.getMonth() + 1).padStart(2, "0"); // Month is zero-indexed, so we add 1
   const day = String(todaysDate.getDate()).padStart(2, "0");
 
+
+
   const todaysFormattedDate = `${year}-${month}-${day}`;
+  
 
 
   if (dateString > todaysFormattedDate) {
     
   } else if (dateString < todaysFormattedDate) {
+ 
+  
     const eventBoxContainer = document.getElementById(eventId);
     eventsPassedCounter++;
     eventBoxContainer.style.display="none";
