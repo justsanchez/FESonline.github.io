@@ -639,6 +639,10 @@ margin: 0 auto;
     margin: 20px 0 0 0;
 }
 
+.fixedAWS {
+  margin: 20px 0 0 -45px; /* negative value from the left to align better */
+}
+
 
 
 
@@ -1314,4 +1318,13 @@ nav a {
     display: block;
     margin: 0 auto;
     text-align: center;
+}
+
+@media screen and (max-width: 1324px) and (min-width: 1096px),
+  screen and (max-width: 799px) {
+  
+  .fixedAWS {
+    margin: 0 auto;
+  }
+
 }
