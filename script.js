@@ -146,38 +146,64 @@ if (allEventsCounter == eventsPassedCounter){
 const modalLinks = document.querySelectorAll(".button");
 
 
-// Add click event listeners to modal links
+const headerTag = document.querySelector('header');
+
 modalLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
     const target = this.getAttribute("href").substring(1); // Remove the #
     const modal = document.getElementById(target);
 
-    // Display the modal (fade-in effect)
-    modal.style.display = "block";
-    //  to prevent scrolling
-    document.body.style.overflow = "hidden";
-
-    // Close modal when clicking outside of it
+    // calculate the width of the scrollbar by subtracting the client width from the inner width
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    // add padding to the body equal to the scrollbar width to prevent layout shift when scroll is disabled
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    // also apply the same padding to the header to keep it aligned with the rest of the page, as it'll shift if left alone 
+    headerTag.style.paddingRight= `${scrollbarWidth}px`;
+    document.body.style.overflow = "hidden"; // Prevent scrolling
+    
+    modal.style.display = "block"; // Show modal
+    
     modal.addEventListener("click", function (e) {
       if (e.target === this) {
         this.style.display = "none";
-        // to enable scrolling
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = "auto"; // Restore scrolling
+        
+        // reset padding
+        document.body.style.paddingRight = ""; 
+        headerTag.style.paddingRight= ""; 
       }
     });
 
-    // Close modal when clicking the close button
     const closeButton = modal.querySelector(".closemodal");
     closeButton.addEventListener("click", function (e) {
       e.preventDefault();
       modal.style.display = "none";
-      // to enable scrolling
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; // Restore scrolling
+      document.body.style.paddingRight = ""; 
+      headerTag.style.paddingRight= ""; 
     });
   });
 });
 
+
+// Function to close the modal
+function closeModal(modal) {
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+    document.body.style.paddingRight = ""; 
+    headerTag.style.paddingRight= ""; 
+  };
+};
+
+// Keydown Event Listener
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const openModal = document.querySelector('.modaloverlay[style*="display: block"]'); // Find open modal
+    closeModal(openModal); // Close the found modal
+  };
+});
 
 const navToggleCheckbox = document.querySelector(".nav-toggle");
 const bodyElement = document.body;
@@ -216,21 +242,6 @@ document.addEventListener("click", function (event) {
 
 // add a function that counts how many elements have the date class
 
-// Function to close the modal
-function closeModal(modal) {
-  if (modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-  };
-};
-
-// Keydown Event Listener
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    const openModal = document.querySelector('.modaloverlay[style*="display: block"]'); // Find open modal
-    closeModal(openModal); // Close the found modal
-  };
-});
 
 
 
