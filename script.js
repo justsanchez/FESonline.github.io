@@ -266,4 +266,4 @@ document.addEventListener("click", function (event) {
 // leave last, its prone to mess up some code
 
 //scroll reveal
-ScrollReveal().reveal(".card", { easing: "ease-in", duration: 20 }); // default was 1000ms
+ScrollReveal().reveal(".card", { easing: "ease-in", duration: 500 }); // default was 1000ms
